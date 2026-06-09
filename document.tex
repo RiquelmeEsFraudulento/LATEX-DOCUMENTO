@@ -1,10 +1,4 @@
-\UseTblrLibrary{amsmath}
-\setkeys{ tblr }{ hspan=minimal, vspan=minimal }
 
-\directlua{
-  local orig = tex.runlocal
-  texconfig.max_print_line = 20000
-}
 \documentclass[a4paper,12pt]{article}
 
 % ─── Codificación e idioma ──────────────────────────────────────────
@@ -15,7 +9,13 @@
 % ─── Geometría de página ────────────────────────────────────────────
 \usepackage[a4paper, total={6in, 9in}]{geometry}
 %\usepackage[margin=1.5cm]{geometry}
+\UseTblrLibrary{amsmath}
+\setkeys{ tblr }{ hspan=minimal, vspan=minimal }
 
+\directlua{
+  local orig = tex.runlocal
+  texconfig.max_print_line = 20000
+}
 
 % ─── Gráficos y figuras ─────────────────────────────────────────────
 \usepackage{graphicx}
@@ -3042,7 +3042,7 @@ Ses. & Fecha & UD & Bloque & Escena / foco & Relación de ejercicios \\
 \noindent
 \begin{longtblr}{
   width      = \textwidth,
-  colspec    = {X[0.85,l,m] X[1.25,l,m] X[2.25,l,m] X[0.65,c,m] X[0.45,c,m]},
+  colspec    = {1.2cm 3cm 5cm 1cm 0.8cm},
   rowsep     = 2pt,
   colsep     = 3pt,
   hlines     = {1pt, white},
