@@ -14,14 +14,31 @@ jobs:
       - name: Descargar código
         uses: actions/checkout@v4
 
-      - name: Compilar documento LaTeX
+      - name: Instalar fuentes adicionales
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-lmodern fonts-dejavu-core
+
+      - name: Primera compilación (generar .aux)
+        uses: xu-cheng/latex-action@4.1.0
+        continue-on-error: true
+        with:
+          root_file: document.tex
+          latexmk_use_lualatex: true
+
+      - name: Segunda compilación (referencias cruzadas)
+        uses: xu-cheng/latex-action@4.1.0
+        continue-on-error: true
+        with:
+          root_file: document.tex
+          latexmk_use_lualatex: true
+
+      - name: Tercera compilación (estabilizar tabularray)
         uses: xu-cheng/latex-action@4.1.0
         with:
           root_file: document.tex
           latexmk_use_lualatex: true
-          # latexmk_use_xelatex: true
-          # Descomenta la siguiente línea solo si algún paquete lo requiere (ej. minted, tikz external):
-          # latexmk_shell_escape: true
+          args: "-f"
 
       - name: Subir PDF como artifact
         uses: actions/upload-artifact@v4

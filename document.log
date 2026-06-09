@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.12)  9 JUN 2026 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.12)  9 JUN 2026 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -674,8 +674,10 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 20
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (./document.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 )
-No file document.aux.
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 202.
@@ -698,6 +700,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 202.
 LaTeX Font Info:    ... okay on input line 202.
 LaTeX Info: Redefining \. on input line 202.
 LaTeX Info: Redefining \% on input line 202.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -805,6 +808,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 202.
 LaTeX Info: Redefining \pageref on input line 202.
 LaTeX Info: Redefining \nameref on input line 202.
+
+(./document.out) (./document.out)
 \@outlinefile=\write4
 \openout4 = `document.out'.
 
@@ -819,7 +824,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 (./portada/portada.tex
 \centeroffset=\skip87
-<imagenes/logo_ugr.jpg, id=4, 777.90625pt x 231.86626pt>
+<imagenes/logo_ugr.jpg, id=8, 777.90625pt x 231.86626pt>
 File: imagenes/logo_ugr.jpg Graphic file (type jpg)
 <use imagenes/logo_ugr.jpg>
 Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
@@ -859,7 +864,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 22.
-<imagenes/etsiit_logo.png, id=5, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=9, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 31.
@@ -870,7 +875,7 @@ Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 31.
 
 pdfTeX warning: pdflatex (file pdftex.map): cannot open font map file
  <./imagenes/logo_ugr.jpg> <./imagenes/etsiit_logo.png>])
-(./prefacios/prefacio.tex Excluding 'comment' comment.)
+(./prefacios/prefacio.tex Excluding 'comment' comment.) (./document.toc)
 \tf@toc=\write5
 \openout5 = `document.toc'.
 
@@ -906,10 +911,10 @@ l.227
 
  
 Here is how much of TeX's memory you used:
- 19834 strings out of 480247
- 341935 string characters out of 5896151
- 692907 words of memory out of 5000000
- 37413 multiletter control sequences out of 15000+600000
+ 19844 strings out of 480247
+ 342052 string characters out of 5896151
+ 693144 words of memory out of 5000000
+ 37415 multiletter control sequences out of 15000+600000
  515108 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  67i,11n,77p,1621b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
