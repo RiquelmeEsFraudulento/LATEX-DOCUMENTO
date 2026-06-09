@@ -1,3 +1,10 @@
+\UseTblrLibrary{amsmath}
+\setkeys{ tblr }{ hspan=minimal, vspan=minimal }
+
+\directlua{
+  local orig = tex.runlocal
+  texconfig.max_print_line = 20000
+}
 \documentclass[a4paper,12pt]{article}
 
 % ─── Codificación e idioma ──────────────────────────────────────────
