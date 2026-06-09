@@ -1,0 +1,30 @@
+name: Compilar LaTeX a PDF
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Compilar documento LaTeX
+        uses: xu-cheng/latex-action@4.1.0
+        with:
+          root_file: document.tex
+          # Si usas fuentes del sistema o paquetes especiales, descomenta la que necesites:
+          # latexmk_use_xelatex: true
+          # latexmk_use_lualatex: true
+          # latexmk_shell_escape: true
+
+      - name: Subir PDF como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: documento-pdf
+          path: "*.pdf"
