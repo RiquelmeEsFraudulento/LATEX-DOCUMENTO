@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/d:\\TFM\\Latex\\document.aux": true,
+        "**/d:\\TFM\\Latex\\document.log": true,
+        "**/d:\\TFM\\Latex\\document.gz": true,
+        "**/d:\\TFM\\Latex\\document.out": true
+    }
+}
