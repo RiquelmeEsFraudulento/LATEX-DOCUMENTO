@@ -316,15 +316,17 @@ Quizás la problemática más difícil de abordar desde el diseño curricular se
 
 \subsection{Objetivos de la propuesta para TIC I: enseñar programación en aula mediante la creación de un videojuego}
 
-Objetivo general
-Que el alumnado de TIC I de 1.º de Bachillerato comprenda y consolide las estructuras de control básicas de la programación —condicionales, bucles e introducción a las funciones— mediante el desarrollo guiado de un videojuego sencillo en Unity, en un entorno de aprendizaje inclusivo, visualmente motivador y alineado con la normativa curricular andaluza vigente.
+\subsubsection*{Objetivo general}
 
-Objetivos específicos
-OBJBACH-1: Entender y aplicar correctamente los fundamentos de la programación estructurada: tipos de datos, variables, operadores, estructuras condicionales (if/else, switch), estructuras iterativas (for, while) y definición básica de funciones.
+Que el alumnado de TIC I de 1.º de Bachillerato comprenda y consolide las estructuras de control básicas de la programación ---condicionales, bucles, funciones y agrupación de datos mediante structs--- así como los fundamentos del diseño algorítmico previo ---diagramas de flujo, pseudocódigo y depuración--- mediante el desarrollo guiado y progresivo de un videojuego real en Unity, en un entorno de aprendizaje inclusivo, visualmente motivador y alineado con la normativa curricular andaluza vigente.
 
-OBJBACH-2: Mejorar la retención de los contenidos de programación a través de la práctica contextualizada: el alumnado no solo codifica, sino que observa de inmediato el efecto visual de su código en el comportamiento del personaje.
+\subsubsection*{Objetivos específicos}
 
-OBJBACH-3: Incrementar la percepción de utilidad de la programación mediante el uso de un contexto cercano y familiar —los videojuegos— que conecta los contenidos curriculares con experiencias e intereses del alumnado.
+\textbf{OBJBACH-1:} Entender y aplicar correctamente los saberes básicos de programación estructurada del bloque TICO.1.E: tipos de datos, variables, operadores, estructuras condicionales (\texttt{if/else}, \texttt{switch}), estructuras iterativas (\texttt{for}, \texttt{while}), definición y uso de funciones con y sin retorno, y agrupación de datos mediante structs.
+
+\textbf{OBJBACH-2:} Consolidar la retención y la transferencia de los contenidos de programación a través de la práctica contextualizada y progresiva por escenas: el alumnado no solo codifica, sino que observa de inmediato el efecto visual de su código en el comportamiento del personaje, y trabaja previamente el razonamiento algorítmico (Unidad 12) antes de trasladarlo al videojuego (Unidad 11).
+
+\textbf{OBJBACH-3:} Incrementar la percepción de utilidad de la programación mediante el uso de un contexto cercano y familiar ---los videojuegos--- que conecta los contenidos curriculares con experiencias e intereses del alumnado, reduciendo la pregunta \textit{«¿para qué me sirve esto?»} gracias a que cada función implementada tiene un efecto visible e inmediato dentro del juego.
 
 
 \subsection{Desarrollo de la propuesta: creación de un proyecto de Unity en el marco de TIC I}
@@ -3397,7 +3399,84 @@ En conjunto, esta organización permite que la evaluación sea coherente con la 
 
 \subsection{Evaluación del aprendizaje del alumnado}
 
+\newpage
+\definecolor{grisclaro}{RGB}{235,235,238}
 
+\noindent
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[1.8,l,t] X[2.6,l,t] X[6,l,t] X[3.1,l,t]},
+  rowsep = 3pt,
+  colsep = 2pt,
+  hlines = {0.5pt, white},
+  vlines = {0.5pt, white},
+  %% Fila de cabecera
+  cell{1}{1} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{2} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{3} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{4} = {bg=headerblue, fg=white, font=\bfseries\small},
+  %% Filas de datos — celdas interiores en gris claro
+  cell{2}{1} = {bg=grisclaro, font=\small\bfseries},
+  cell{2}{2} = {bg=grisclaro, font=\small},
+  cell{2}{3} = {bg=grisclaro, font=\footnotesize},
+  cell{2}{4} = {bg=grisclaro, font=\footnotesize},
+  cell{3}{1} = {bg=grisclaro, font=\small\bfseries},
+  cell{3}{2} = {bg=grisclaro, font=\small},
+  cell{3}{3} = {bg=grisclaro, font=\footnotesize},
+  cell{3}{4} = {bg=grisclaro, font=\footnotesize},
+  cell{4}{1} = {bg=grisclaro, font=\small\bfseries},
+  cell{4}{2} = {bg=grisclaro, font=\small},
+  cell{4}{3} = {bg=grisclaro, font=\footnotesize},
+  cell{4}{4} = {bg=grisclaro, font=\footnotesize},
+}
+%% Fila 1 — Cabecera
+\textbf{Código} & \textbf{Objetivo} & \textbf{Indicadores de Logro} & \textbf{Instrumentos de Evaluación} \\
+%% Fila 2 — OBJBACH-1
+{OBJ
+\newline BACH-1} &
+\textbf{Aplicar los saberes básicos de programación estructurada} (variables, tipos, operadores, condicionales, bucles, funciones y structs) en la resolución de mecánicas concretas del videojuego. &
+\begin{minipage}[t]{\linewidth}\begin{itemize}
+\item El 80\,\% identifica y usa correctamente tipos de datos primitivos (\texttt{int}, \texttt{float}, \texttt{bool}, \texttt{string}) en sus ejercicios.
+\item El 75\,\% declara variables, constantes y structs sin errores de sintaxis relevantes.
+\item El 70\,\% implementa al menos una función con retorno que afecta al comportamiento del juego.
+\end{itemize}\end{minipage} &
+\begin{minipage}[t]{\linewidth}\begin{itemize}
+\item Rúbrica de ejercicios por escenas (UD11)
+\item Revisión del código entregado con comentarios
+\item Prueba escrita breve o tipo test (UD12)
+\end{itemize}\end{minipage} \\
+%% Fila 3 — OBJBACH-2
+{OBJ
+\newline BACH-2}&
+\textbf{Consolidar la retención mediante la práctica contextualizada y el razonamiento algorítmico previo}: diseñar antes de codificar (UD12) y verificar el resultado en el juego (UD11). &
+\begin{minipage}[t]{\linewidth}\begin{itemize}
+\item El 75\,\% aplica correctamente condicionales, bucles y funciones en la práctica funcional por escenas.
+\item El 70\,\% es capaz de elaborar un pseudocódigo o diagrama de flujo previo coherente con la solución implementada.
+\item El 80\,\% explica oralmente el funcionamiento de su código cuando se le pregunta de forma individual.
+\end{itemize}\end{minipage} &
+\begin{minipage}[t]{\linewidth}\begin{itemize}
+\item Tarea corta de algoritmos, diagramas y pseudocódigo (UD12)
+\item Rúbrica de proyecto funcional por escenas (UD11)
+\item Observación directa y comprobación oral puntual
+\end{itemize}\end{minipage} \\
+%% Fila 4 — OBJBACH-3
+{OBJ
+\newline BACH-3} &
+\textbf{Incrementar la percepción de utilidad de la programación} conectando los saberes básicos curriculares con un contexto motivador y visible: cada función que el alumno escribe desbloquea una mecánica real del videojuego. &
+\begin{minipage}[t]{\linewidth}\begin{itemize}
+\item Incremento de al menos 2 puntos (sobre 5) en la percepción de utilidad según cuestionario pre/post.
+\item El 85\,\% del alumnado manifiesta que «ahora entiende para qué sirve programar» al finalizar la propuesta.
+\item Al menos el 60\,\% comenta espontáneamente su proyecto con personas de su entorno (indicador de conexión emocional).
+\end{itemize}\end{minipage} &
+\begin{minipage}[t]{\linewidth}\begin{itemize}
+\item Cuestionario de motivación y percepción de utilidad (pre y post, escala Likert 1--5)
+\item Registro de comentarios espontáneos en clase
+\item Encuesta de satisfacción al cierre del bloque
+\end{itemize}\end{minipage} \\
+\end{longtblr}
+\vspace{0.3cm}
+
+Respecto a \textbf{OBJBACH-1, OBJBACH-2 y OBJBACH-3}, estos se encuentran presentes en todas las actividades prácticas del anexo que cuentan con soporte audiovisual mediante simulación de videojuegos. Su cobertura abarca las dos unidades del bloque de programación: la Unidad~12 trabaja el diseño algorítmico previo ---pseudocódigo, diagramas de flujo, fragmentación de problemas y depuración guiada--- mientras que la Unidad~11 traslada ese razonamiento al código real mediante el desarrollo funcional por escenas. Este orden deliberado permite que el alumnado llegue a la escritura de código con una lógica ya interiorizada, reduciendo la frustración inicial y mejorando la capacidad de depuración autónoma. Se han incluido también ejercicios de corte más convencional ---preguntas de síntaxis, identificación de errores y estructuras descontextualizadas--- con el propósito de preparar al alumnado para contextos de evaluación típicos en educación superior y ciclos de FP avanzados, donde la abstracción y la descontextualización son más prevalentes.
 
 \subsection{Evaluación de la motivación y de la experiencia}
 
