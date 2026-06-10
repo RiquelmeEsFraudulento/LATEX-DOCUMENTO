@@ -3405,6 +3405,102 @@ Puntuación & Descriptor de logro \\
 \end{tblr}
 \end{table}
 
+
+% ──────────────────────────────────────────────
+\subsubsection*{Prueba escrita de la Unidad 12}
+% ──────────────────────────────────────────────
+
+La prueba escrita se realiza el 16 de diciembre (M16/12) en formato individual en papel. Tiene una duración de 45~minutos y consta de tres partes alineadas con los saberes básicos del bloque TICO.1.E.2: un ejercicio de pseudocódigo (saberes E.2.1--E.2.5), un diagrama de flujo (saberes E.2.1--E.2.5) y un tipo test de depuración (saber E.2.6). La puntuación máxima es de 3~puntos: 1~punto por parte. La calificación se traslada al apartado de la Unidad~12 según la rúbrica ya presentada en la memoria (escala 0,0--1,0 por ejercicio). No computa para la nota del primer trimestre.
+
+\vspace{0.3cm}
+\noindent\fbox{\parbox{0.97\textwidth}{
+\textbf{Prueba escrita — UD12 · Diseño algorítmico y depuración}\\[3pt]
+\textbf{Nombre:} \underline{\hspace{6cm}} \quad \textbf{Fecha:} 16/12 \quad \textbf{Duración:} 45 min\\[3pt]
+\textit{Responde con lápiz o bolígrafo. Puedes usar pseudocódigo o lenguaje natural en los ejercicios 1 y 2.}
+}}
+
+\vspace{0.4cm}
+\noindent\textbf{Ejercicio 1 — Pseudocódigo \small(saberes E.2.1–E.2.5 · 1 punto)\normalsize}
+
+\vspace{0.15cm}
+\noindent El jugador tiene \texttt{vida = 8} y el veneno quita \texttt{0,5} puntos de vida por turno durante \texttt{6} turnos. Si la vida llega a 0 o menos, el jugador muere. Escribe el pseudocódigo de la función \texttt{ProcesarVeneno} que: (a) recorre los turnos de veneno activos, (b) descuenta vida en cada turno y (c) detiene el proceso si el jugador muere antes de acabar los turnos.
+
+\vspace{0.15cm}
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[1,l,t]},
+  rowsep = 2pt,
+  hlines = {0.5pt, gray8},
+  vlines = {0.5pt, gray8},
+  cell{1}{1} = {bg=grisclaro, font=\small\bfseries},
+  row{2} = {bg=white, ht=5cm},
+}
+Espacio de respuesta — Ejercicio 1 \\
+~ \\
+\end{longtblr}
+
+\vspace{0.4cm}
+\noindent\textbf{Ejercicio 2 — Diagrama de flujo \small(saberes E.2.1–E.2.5 · 1 punto)\normalsize}
+
+\vspace{0.15cm}
+\noindent Dibuja el diagrama de flujo de la función \texttt{EsColorVulnerable} que comprueba si el tipo de daño recibido coincide con alguno de los tipos vulnerables del enemigo. El enemigo tiene hasta 3 tipos vulnerables almacenados. Si la lista está vacía, cualquier tipo es válido. Usa los símbolos estándar (rombo para decisión, rectángulo para proceso, óvalo para inicio/fin).
+
+\vspace{0.15cm}
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[1,l,t]},
+  rowsep = 2pt,
+  hlines = {0.5pt, gray8},
+  vlines = {0.5pt, gray8},
+  cell{1}{1} = {bg=grisclaro, font=\small\bfseries},
+  row{2} = {bg=white, ht=6cm},
+}
+Espacio de respuesta — Ejercicio 2 \\
+~ \\
+\end{longtblr}
+
+\vspace{0.4cm}
+\noindent\textbf{Ejercicio 3 — Tipo test de depuración \small(saber E.2.6 · 1 punto, −0,25 por error)\normalsize}
+
+\vspace{0.15cm}
+\noindent Cada pregunta tiene una sola respuesta correcta. Rodea la letra correspondiente.
+
+\vspace{0.2cm}
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[0.25,c,t] X[9.75,l,t]},
+  rowsep = 4pt,
+  colsep = 5pt,
+  hlines = {0.5pt, gray8},
+  vlines = {0.5pt, gray8},
+  cell{1}{1} = {bg=headerblue, fg=white, font=\bfseries\small, c=2},
+  row{2,4,6,8,10} = {bg=grisclaro},
+  row{3,5,7,9,11} = {bg=white},
+  cells = {font=\small},
+}
+\SetCell[c=2]{c} Preguntas de depuración — Tipo test & \\
+P1 &
+\textbf{Un alumno escribe:} \texttt{if (golpes = 5) \{ danyo = 3; \}}. El código compila pero el efecto de sangrado se activa siempre. ¿Cuál es el error?\\
+& a) Falta el operador \texttt{!} antes de la condición.\quad b) Se usa \texttt{=} (asignación) en vez de \texttt{==} (comparación).\quad c) El valor 5 debería ser una variable.\quad d) La llave de cierre está mal colocada. \\
+P2 &
+\textbf{Observas que el veneno quita daño indefinidamente} aunque \texttt{turnosVeneno} debería llegar a 0. ¿Cuál es la causa más probable?\\
+& a) El operador \texttt{\%} está aplicado al valor de vida en lugar de al contador.\quad b) El contador \texttt{turnosVeneno} se decrementa después de la condición de parada en vez de antes.\quad c) La variable \texttt{turnosVeneno} no se reinicia a 0 al salir del bucle.\quad d) Se usa \texttt{while} en vez de \texttt{for}. \\
+P3 &
+\textbf{La función \texttt{EsPrimo(4)} devuelve \texttt{true}} cuando debería devolver \texttt{false}. El alumno ha escrito: \texttt{for (int i = 2; i < n; i++)}. ¿Qué cambio lo corrige?\\
+& a) Cambiar \texttt{i < n} por \texttt{i <= n/2}.\quad b) Cambiar \texttt{i < n} por \texttt{i * i <= n}.\quad c) Inicializar \texttt{i = 1} en lugar de \texttt{i = 2}.\quad d) Cambiar \texttt{++} por \texttt{--}. \\
+P4 &
+\textbf{Un alumno escribe una función que devuelve el número de escenas completadas.} Ve en pantalla que siempre devuelve 0. Antes de tocar el código, ¿cuál es el primer paso de depuración correcto?\\
+& a) Borrar el código y empezar de nuevo.\quad b) Comprobar si la variable contador se inicializa fuera de la función y nunca se modifica dentro.\quad c) Cambiar el tipo de retorno de \texttt{int} a \texttt{float}.\quad d) Añadir más condiciones \texttt{if} para cubrir más casos. \\
+P5 &
+\textbf{El boss debería activar el estado Sleep tras 8 golpes}, pero se activa al primer golpe. El alumno ha escrito: \texttt{if (golpes >= 1) \{ AplicarSleep(); \}}. ¿Cómo se corrige?\\
+& a) Cambiar \texttt{>=} por \texttt{<=}.\quad b) Cambiar el umbral a \texttt{golpes >= 8} y resetear el contador al activar el estado.\quad c) Mover la llamada a \texttt{AplicarSleep()} fuera del \texttt{if}.\quad d) Inicializar el contador de golpes a 8 en lugar de 0. \\
+\end{longtblr}
+
+\vspace{0.1cm}
+\noindent\small\textit{Clave de corrección (solo para el docente): P1-b · P2-c · P3-b · P4-b · P5-b.}
+\normalsize
+
+
 % ============================================================
 % RÚBRICA DEL EXAMEN DEL TEMA 12
 % ============================================================
@@ -3724,7 +3820,7 @@ Esta decisión tiene un efecto directo sobre el clima de aula: cuando todos usan
 
 El carácter motivador del material ---programar para que el personaje funcione--- eleva el interés general del grupo, lo que se traduce en menor absentismo voluntario, menor tendencia a la dilación en las entregas y un clima de trabajo más sostenido. El aula de informática, que en otras asignaturas puede ser un foco de distracción, se convierte en este contexto en el espacio donde el alumno quiere estar.
 
-\section{Testar su uso (evaluación de la propuesta)}
+\section{Evaluación del grado de éxito de la propuesta docente}
 
 \subsection{Evaluación del aprendizaje del alumnado}
 
@@ -3819,6 +3915,129 @@ El carácter motivador del material ---programar para que el personaje funcione-
 
 Respecto a \textbf{OBJBACH-1, OBJBACH-2 y OBJBACH-3}, estos se encuentran presentes en todas las actividades prácticas del anexo que cuentan con soporte audiovisual mediante simulación de videojuegos. Su cobertura abarca las dos unidades del bloque de programación: la Unidad~12 trabaja el diseño algorítmico previo ---pseudocódigo, diagramas de flujo, fragmentación de problemas y depuración guiada--- mientras que la Unidad~11 traslada ese razonamiento al código real mediante el desarrollo funcional por escenas. Se han incluido también ejercicios de corte más convencional con el propósito de preparar al alumnado para contextos de evaluación típicos en educación superior y ciclos de FP avanzados, donde la abstracción y la descontextualización son más prevalentes. \textbf{OBJBACH-4} actúa de forma transversal: no depende de una sesión concreta, sino que se materializa en el propio diseño estructural de los materiales y en la dinámica de trabajo que se mantiene estable a lo largo de todo el bloque.
 \subsection{Evaluación de la motivación y de la experiencia}
+
+\subsection{Instrumentos de la experiencia del alumnado}
+
+% ──────────────────────────────────────────────
+\subsubsection{Cuestionario de motivación (pre y post)}
+% ──────────────────────────────────────────────
+
+El cuestionario se aplica dos veces: antes de comenzar el bloque de programación (sesión~1 de UD12) y al finalizar el proyecto (sesión~28, entrega final de UD11). Las respuestas son anónimas y no calificables; su función es exclusivamente investigadora, para contrastar si la intervención mejora la percepción de utilidad y la motivación intrínseca hacia la programación, en coherencia con OBJBACH-3. Cada ítem se puntúa en una escala Likert de 1 (totalmente en desacuerdo) a 5 (totalmente de acuerdo). La puntuación total máxima es 50~puntos.
+
+\vspace{0.3cm}
+\noindent\textbf{Cuestionario de motivación hacia la programación}\\[2pt]
+\noindent\small\textit{Rodea el número que mejor refleje tu opinión. No hay respuestas correctas ni incorrectas.}\\[2pt]
+\noindent\small 1 = Totalmente en desacuerdo \quad 2 = En desacuerdo \quad 3 = Ni acuerdo ni desacuerdo \quad 4 = De acuerdo \quad 5 = Totalmente de acuerdo
+\normalsize
+
+\vspace{0.2cm}
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[0.6,c,m] X[7.5,l,m] X[0.6,c,m] X[0.6,c,m] X[0.6,c,m] X[0.6,c,m] X[0.6,c,m]},
+  rowsep = 3pt,
+  colsep = 4pt,
+  hlines = {0.5pt, gray8},
+  vlines = {0.5pt, gray8},
+  cell{1}{1} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{2} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{3} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{4} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{5} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{6} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{7} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  row{2,4,6,8,10,12} = {bg=grisclaro},
+  row{3,5,7,9,11} = {bg=white},
+  cells = {font=\small},
+}
+N.º & Afirmación & 1 & 2 & 3 & 4 & 5 \\
+1 & Creo que saber programar me será útil en el futuro. & & & & & \\
+2 & Programar me parece una actividad interesante. & & & & & \\
+3 & Entiendo para qué sirve lo que aprendo en esta asignatura. & & & & & \\
+4 & Me siento capaz de resolver los ejercicios de programación. & & & & & \\
+5 & Me gusta cuando veo que mi código hace que algo funcione en pantalla. & & & & & \\
+6 & Prefiero asignaturas donde puedo ver el resultado de lo que hago. & & & & & \\
+7 & Cuando algo no me funciona, tengo ganas de buscar el error. & & & & & \\
+8 & Relacionar la programación con un videojuego me ayuda a entenderla mejor. & & & & & \\
+9 & Me resulta satisfactorio completar un ejercicio difícil. & & & & & \\
+10 & Recomendaría esta forma de aprender a un compañero. & & & & & \\
+\end{longtblr}
+
+\vspace{0.2cm}
+\noindent\small\textit{Dimensiones evaluadas: ítems 1--3 → percepción de utilidad (OBJBACH-3); ítems 4--7 → autoeficacia y motivación intrínseca; ítems 8--10 → valoración del contexto videojuego.}
+\normalsize
+
+% ──────────────────────────────────────────────
+\subsubsection{Cuestionario de satisfacción y cierre}
+% ──────────────────────────────────────────────
+
+Este cuestionario se cumplimenta en la última sesión del bloque (X25/03, sesión~28), una vez entregado el proyecto. Es anónimo y no calificable. Su objetivo es recoger la valoración del alumnado sobre el formato, el ritmo y la utilidad percibida de la propuesta, con vistas a su mejora en cursos futuros y como evidencia del indicador de logro de OBJBACH-3 (el 85\,\% manifiesta entender para qué sirve programar) y OBJBACH-4 (satisfacción con el formato de los materiales). Consta de dos bloques: escala Likert y preguntas abiertas cortas.
+
+\vspace{0.3cm}
+\noindent\textbf{Cuestionario de satisfacción — \textit{Ninja: Crónicas de lo Inerte}}
+
+\vspace{0.15cm}
+\noindent\small\textit{Bloque A — Escala de valoración. Rodea el número (1 = Nada de acuerdo · 5 = Totalmente de acuerdo).}
+\normalsize
+
+\vspace{0.1cm}
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[0.5,c,m] X[7.8,l,m] X[0.5,c,m] X[0.5,c,m] X[0.5,c,m] X[0.5,c,m] X[0.5,c,m]},
+  rowsep = 3pt,
+  colsep = 4pt,
+  hlines = {0.5pt, gray8},
+  vlines = {0.5pt, gray8},
+  cell{1}{1} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{2} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{3} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{4} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{5} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{6} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  cell{1}{7} = {bg=headerblue, fg=white, font=\bfseries\footnotesize, c},
+  row{2,4,6,8,10,12,14} = {bg=grisclaro},
+  row{3,5,7,9,11,13} = {bg=white},
+  cells = {font=\small},
+}
+N.º & Afirmación & 1 & 2 & 3 & 4 & 5 \\
+1 & Ahora entiendo para qué sirve programar. & & & & & \\
+2 & El videojuego hizo que las clases fueran más interesantes. & & & & & \\
+3 & Los ejercicios tenían un tamaño adecuado (no eran ni muy cortos ni muy largos). & & & & & \\
+4 & Siempre supe qué se esperaba de mí en cada actividad. & & & & & \\
+5 & Pude avanzar a mi propio ritmo sin quedarme bloqueado. & & & & & \\
+6 & Los vídeos de referencia y el manual me ayudaron cuando tenía dudas. & & & & & \\
+7 & Ver el resultado en el juego me motivó a seguir programando. & & & & & \\
+8 & El hecho de que el código hiciera algo visible me ayudó a entenderlo mejor. & & & & & \\
+9 & Me gustaría aprender más programación en cursos futuros. & & & & & \\
+10 & Recomendaría esta asignatura a estudiantes del curso siguiente. & & & & & \\
+\end{longtblr}
+
+\vspace{0.3cm}
+\noindent\small\textit{Bloque B — Preguntas abiertas (responde con 1--3 frases).}
+\normalsize
+
+\vspace{0.1cm}
+\begin{longtblr}{
+  width = \textwidth,
+  colspec = {X[0.25,c,t] X[9.75,l,t]},
+  rowsep = 3pt,
+  colsep = 5pt,
+  hlines = {0.5pt, gray8},
+  vlines = {0.5pt, gray8},
+  cell{1}{1} = {bg=headerblue, fg=white, font=\bfseries\small},
+  cell{1}{2} = {bg=headerblue, fg=white, font=\bfseries\small},
+  row{2,4,6} = {bg=grisclaro, ht=2cm},
+  row{3,5} = {bg=white, ht=2cm},
+  cells = {font=\small},
+}
+N.º & Pregunta \\
+B1 & ¿Qué parte del proyecto te resultó más difícil? ¿Por qué? \\
+B2 & ¿Hay algo que cambiarías del material o de cómo se organizaron las clases? \\
+B3 & ¿Qué es lo que más te llevas de este bloque? \\
+\end{longtblr}
+
+\vspace{0.2cm}
+\noindent\small\textit{Criterio de análisis: se considerará que OBJBACH-3 se ha alcanzado si el ítem A1 obtiene una media $\geq 4{,}0$ y el porcentaje de respuestas 4--5 supera el 85\,\%. OBJBACH-4 se valorará con la media de los ítems A3--A6 ($\geq 3{,}5$ como umbral mínimo).}
+\normalsize
 
 \subsection{Limitaciones del test y mejora}
 
