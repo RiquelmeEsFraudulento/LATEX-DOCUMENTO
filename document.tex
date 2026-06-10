@@ -564,11 +564,12 @@ Finalmente, el centro cuenta con un aula específica para alumnado que necesita 
 
 
 \subsection{Problemáticas detectadas en la enseñanza de TIC I}
-Absentismo y dilación en las entregas
+
+\subsubsection*{Absentismo y dilación en las entregas}
 
 TIC I es una asignatura optativa y, en la jerarquía implícita de prioridades que construye el alumnado de Bachillerato, ocupa frecuentemente una posición subordinada respecto a las materias troncales de modalidad que determinan la nota de acceso a la universidad. Esta jerarquía se traduce en patrones concretos: faltas de asistencia concentradas en los días previos a exámenes de otras materias, entregas de prácticas realizadas en el último minuto y sin la reflexión necesaria, y tendencia a «acumular» sesiones no completadas. El resultado es una secuencia de aprendizaje fragmentada: el alumno que falta la sesión en que se explica el bucle while llega a la sesión siguiente sin los cimientos, genera una duda que bloquea toda la práctica y, en el peor caso, abandona o copia. El diseño de materiales que el alumnado pueda consultar y trabajar de forma autónoma —en el aula, en casa o en otro momento del curso— es una respuesta directa a esta dinámica.
 
-Bloque 3: Desmotivación y escasa percepción de utilidad
+\subsubsection*{Desmotivación y escasa percepción de utilidad}
 
 Quizás la problemática más difícil de abordar desde el diseño curricular sea la que los propios alumnos expresan con mayor frecuencia: «¿para qué me sirve esto?». La programación en C presentada mediante ejercicios descontextualizados —calcular el factorial de un número, convertir temperaturas, imprimir la tabla de multiplicar— no conecta con los intereses ni con las experiencias cotidianas de un adolescente de dieciséis años. La investigación sobre motivación escolar señala de forma consistente que la percepción de utilidad y relevancia personal del contenido es uno de los predictores más robustos de la motivación intrínseca (Wigfield and Eccles, 2000). Cuando el alumnado ve que el código que acaba de escribir hace que un personaje en 3D realiza una acción y es interactiva, la pregunta por la utilidad se responde sola. Esta conexión entre abstracción y resultado visible es el corazón motivacional de la propuesta.
 
@@ -587,6 +588,8 @@ Que el alumnado de TIC I de 1.º de Bachillerato comprenda y consolide las estru
 \textbf{OBJBACH-2:} Consolidar la retención y la transferencia de los contenidos de programación a través de la práctica contextualizada y progresiva por escenas: el alumnado no solo codifica, sino que observa de inmediato el efecto visual de su código en el comportamiento del personaje, y trabaja previamente el razonamiento algorítmico (Unidad 12) antes de trasladarlo al videojuego (Unidad 11).
 
 \textbf{OBJBACH-3:} Incrementar la percepción de utilidad de la programación mediante el uso de un contexto cercano y familiar ---los videojuegos--- que conecta los contenidos curriculares con experiencias e intereses del alumnado, reduciendo la pregunta \textit{«¿para qué me sirve esto?»} gracias a que cada función implementada tiene un efecto visible e inmediato dentro del juego.
+
+\textbf{OBJBACH-4:} Garantizar que los materiales didácticos del proyecto sean accesibles, adaptables y funcionales para un aula diversa, de modo que el diseño estructural de los propios recursos ---fragmentación de ejercicios, anticipación, ritmo flexible, verificación inmediata y ampliación integrada--- permita a cada alumno avanzar según sus necesidades sin que las adaptaciones generen diferenciación visible entre el alumnado.
 
 
 \subsection{Desarrollo de la propuesta: creación de un proyecto de Unity en el marco de TIC I}
@@ -3655,6 +3658,72 @@ En conjunto, esta organización permite que la evaluación sea coherente con la 
 
 \subsection{Atención a la diversidad y clima de aula}
 
+La diversidad es una realidad cotidiana en cualquier aula de Bachillerato: ritmos distintos, formas de procesar la información diferentes y circunstancias personales que afectan la disponibilidad de cada alumno en cada sesión. Esta propuesta no nace como un estudio sobre necesidades educativas especiales, sino como un diseño didáctico que, desde su concepción, intenta que el flujo de trabajo se adapte de forma natural a esa diversidad sin que el alumno tenga que identificarse ni etiquetarse para recibirla. El principio que guía esta sección es sencillo: los mismos materiales, para todos, con adaptaciones ya integradas.
+
+\subsubsection*{Ajustes universales de diseño}
+
+Varios recursos de la propuesta responden a necesidades que pueden afectar a cualquier alumno, independientemente de si tiene o no un diagnóstico formal:
+
+\begin{itemize}
+    \item \textbf{Vídeos cortos con subtítulos y demostración visual.} Antes de cada ejercicio, el profesor realiza una demostración en Unity donde se ve exactamente qué debe ocurrir cuando el código funciona bien. Ese mismo comportamiento está grabado en vídeos de captura de pantalla disponibles para quien necesite revisar el objetivo varias veces o haya faltado a la sesión. El alumno que llega tarde, que se despistó o que simplemente necesita ver el resultado dos veces más tiene esa posibilidad sin depender del profesor.
+
+    \item \textbf{Manual visual con instrucciones paso a paso.} Cada ejercicio del manual incluye el enunciado, la descripción del comportamiento esperado y las indicaciones mínimas para empezar. No hay pantalla en blanco. El alumno que necesita más estructura encuentra los pasos numerados; el que prefiere avanzar solo puede ignorarlos.
+
+    \item \textbf{Ritmo flexible y posibilidad de repetir.} La estructura del proyecto en escenas progresivas permite que cada alumno avance a su propio ritmo. Completar una escena desbloquea la siguiente, pero nadie está bloqueado si no termina en la sesión prevista: el trabajo puede retomarse exactamente donde se dejó.
+
+    \item \textbf{Auriculares como recurso de concentración.} En sesiones de trabajo individual, el uso de auriculares está permitido. Reduce el ruido de fondo y ayuda a los alumnos que necesitan aislar estímulos externos para mantener la atención.
+
+    \item \textbf{Accesibilidad visual.} El alumno con dificultad visual severa se ubica cerca del proyector durante las explicaciones del profesor. Los archivos \texttt{.cpp} de prueba permiten además trabajar el mismo núcleo lógico fuera del entorno visual de Unity si fuera necesario.
+\end{itemize}
+
+\subsubsection*{Alumnado con TDAH: ejercicios pequeños que construyen uno grande}
+
+Una de las decisiones de diseño con mayor impacto en la atención es la fragmentación de funcionalidades largas en series de funciones cortas, independientes y verificables. Esta decisión no tiene un origen exclusivamente pedagógico en términos de programación: responde también a que el alumnado con TDAH se pierde cuando los objetivos son difusos o cuando la tarea tiene demasiados pasos activos simultáneos.
+
+Un ejemplo concreto se encuentra en la relación de ejercicios de \texttt{PlayerHealth}, donde los ejercicios del 1 al 7 implementan en conjunto todo el sistema de subida de experiencia y nivel del jugador. Sin embargo, esa funcionalidad se distribuye así:
+
+\begin{itemize}
+    \item \textbf{Ejercicios 1--3 (EsPrimo, SiguientePrimo, CalcularXPNecesariaParaNivel):} Calculan cuánta experiencia necesita el jugador para subir de nivel. El umbral de cada nivel corresponde al siguiente número primo multiplicado por diez. Dentro de este bloque, \texttt{EsPrimo} prueba la divisibilidad hasta la raíz cuadrada, \texttt{SiguientePrimo} llama a \texttt{EsPrimo} en un bucle para encontrar el siguiente umbral, y \texttt{CalcularXPNecesariaParaNivel} usa el resultado para devolver el umbral exacto del nivel actual.
+
+    \item \textbf{Ejercicios 4--7 (Multiplicador de XP, XP ganada, subida de nivel en bucle, orquestación del proceso completo):} Procesan la subida de nivel una vez que se acumula suficiente experiencia. El ejercicio 4 calcula el multiplicador de XP según la escena y la ronda; el 5 calcula la XP ganada con un mínimo garantizado; el 6 gestiona la subida de nivel en bucle si se acumula suficiente XP para subir varios niveles de golpe; y el 7 orquesta todo el proceso llamando a las funciones anteriores en orden.
+\end{itemize}
+
+Esta partición significa que el alumno con TDAH nunca se enfrenta a una función larga con diez pasos activos: cada ejercicio tiene un objetivo claro, un tiempo estimado corto (entre 15 y 45 minutos según el manual) y un criterio de corrección inmediato a través del archivo \texttt{test.cpp}. Cuando el test pasa, la tarea está terminada. Ese retorno inmediato es especialmente valioso porque elimina la ambigüedad sobre si «ya está bien» o «falta algo».
+
+Adicionalmente, los plazos de entrega son flexibles: el alumno con TDAH que necesita tiempo extra para completar una escena puede hacerlo sin penalización en la nota, y se le asigna tiempo adicional en la prueba escrita de la Unidad~12.
+
+\subsubsection*{Alumnado con TEA: anticipación, estructura y refuerzo visual}
+
+Antes de comenzar cualquier actividad, se anticipa al alumno tres elementos: qué se va a hacer (el ejercicio concreto que corresponde a esa sesión), cuánto durará (el tiempo estimado que figura en el manual) y qué se espera de él (que su función haga pasar los tests del archivo \texttt{test.cpp}). Esta anticipación reduce significativamente la incertidumbre de inicio, que es uno de los factores que con mayor frecuencia genera bloqueo.
+
+La estructura de tres bloques de cada sesión ---explicación del profesor, demostración en Unity, trabajo individual--- se repite de forma estable a lo largo de todo el bloque de programación. Esa previsibilidad hace que el alumno con TEA sepa en todo momento en qué fase de la sesión está y qué se espera de él a continuación, sin necesidad de preguntar ni de improvisar.
+
+La demostración en vivo del profesor, donde se muestra exactamente cuál es el comportamiento correcto del juego antes de que el alumno empiece a programar, actúa como referente visual concreto: no es una descripción abstracta de lo que hay que lograr, sino una imagen real del resultado.
+
+\subsubsection*{Alumnado con altas capacidades: ampliación sin presionar al grupo}
+
+La propuesta no desarrolla este campo como objeto de estudio, pero incorpora una respuesta estructural al problema habitual: el alumno que termina antes no tiene nada que hacer y acaba generando presión implícita sobre sus compañeros.
+
+El script \texttt{PlayerScript} (denominado \textit{PlayerScriptSoluciones} en el material docente) incluye aproximadamente veinte ejercicios adicionales de análisis sobre los enemigos: cálculo de distancias, identificación del enemigo más cercano o más lejano, recuento de enemigos en rango, comprobación de si el jugador puede contraatacar\ldots{} Son ejercicios de nivel algo superior, que combinan búsquedas lineales, comparaciones de distancia y condiciones compuestas. El docente puede proponer los que considere más adecuados en función del ritmo del grupo, sin que su omisión afecte al progreso de las escenas principales.
+
+En situaciones concretas y con criterio docente, el alumno de altas capacidades que ya ha terminado puede apoyar puntualmente a un compañero que presenta dificultades. Esto no se plantea como un rol fijo, sino como una posibilidad que puede activarse cuando el contexto lo hace natural.
+
+\subsubsection*{Absentismo y recuperación estructural}
+
+El bloque de programación se ubica en diciembre, periodo en que el absentismo por exámenes de otras materias es especialmente frecuente. La propuesta incorpora dos mecanismos que absorben ese absentismo sin penalizar al alumno:
+
+En primer lugar, la Unidad~12 (que se imparte justo antes) trabaja los mismos saberes básicos que la Unidad~11. Si un alumno no rinde bien en la prueba de la Unidad~12 por saturación de exámenes, tiene una segunda oportunidad implícita durante el desarrollo de la Unidad~11: completar correctamente los ejercicios del videojuego equivale, a efectos de recuperación, a demostrar los mismos criterios. La Unidad~12 no computa en la nota del primer trimestre precisamente para que no penalice en Navidades.
+
+En segundo lugar, la repetición deliberada de conceptos a lo largo de las escenas hace que quien falta una sesión encuentre en la siguiente una recapitulación natural. El mismo concepto ---un bucle \texttt{for}, una estructura \texttt{if/else}--- reaparece en contextos diferentes a lo largo de las seis escenas. Nadie queda irremediablemente descolgado por una sola sesión perdida.
+
+\subsubsection*{Inclusión sin estigma: el mismo material para todos}
+
+Todas las adaptaciones descritas están integradas en los materiales desde el origen: el manual con pasos numerados es el mismo manual que usa todo el grupo; los vídeos de referencia están disponibles para cualquiera; los ejercicios cortos son la unidad de trabajo para todos, no solo para quien tiene dificultades. No hay un «material especial» que diferencie a unos alumnos de otros.
+
+Esta decisión tiene un efecto directo sobre el clima de aula: cuando todos usan los mismos recursos y cada cual los aprovecha a su propio ritmo, la adaptación deja de ser visible como tal. El alumno que necesita ver el vídeo dos veces no hace algo diferente de quien lo consulta por curiosidad. El alumno que termina con los ejercicios de \texttt{PlayerScript} no es «el de altas capacidades», sino simplemente alguien que quiere seguir avanzando.
+
+El carácter motivador del material ---programar para que el personaje funcione--- eleva el interés general del grupo, lo que se traduce en menor absentismo voluntario, menor tendencia a la dilación en las entregas y un clima de trabajo más sostenido. El aula de informática, que en otras asignaturas puede ser un foco de distracción, se convierte en este contexto en el espacio donde el alumno quiere estar.
+
 \section{Testar su uso (evaluación de la propuesta)}
 
 \subsection{Evaluación del aprendizaje del alumnado}
@@ -3663,19 +3732,17 @@ En conjunto, esta organización permite que la evaluación sea coherente con la 
 \definecolor{grisclaro}{RGB}{235,235,238}
 
 \noindent
-\begin{longtblr}{
+\begin{tblr}{
   width = \textwidth,
   colspec = {X[1.8,l,t] X[2.6,l,t] X[6,l,t] X[3.1,l,t]},
   rowsep = 3pt,
   colsep = 2pt,
   hlines = {0.5pt, white},
   vlines = {0.5pt, white},
-  %% Fila de cabecera
   cell{1}{1} = {bg=headerblue, fg=white, font=\bfseries\small},
   cell{1}{2} = {bg=headerblue, fg=white, font=\bfseries\small},
   cell{1}{3} = {bg=headerblue, fg=white, font=\bfseries\small},
   cell{1}{4} = {bg=headerblue, fg=white, font=\bfseries\small},
-  %% Filas de datos — celdas interiores en gris claro
   cell{2}{1} = {bg=grisclaro, font=\small\bfseries},
   cell{2}{2} = {bg=grisclaro, font=\small},
   cell{2}{3} = {bg=grisclaro, font=\footnotesize},
@@ -3688,56 +3755,69 @@ En conjunto, esta organización permite que la evaluación sea coherente con la 
   cell{4}{2} = {bg=grisclaro, font=\small},
   cell{4}{3} = {bg=grisclaro, font=\footnotesize},
   cell{4}{4} = {bg=grisclaro, font=\footnotesize},
+  cell{5}{1} = {bg=grisclaro, font=\small\bfseries},
+  cell{5}{2} = {bg=grisclaro, font=\small},
+  cell{5}{3} = {bg=grisclaro, font=\footnotesize},
+  cell{5}{4} = {bg=grisclaro, font=\footnotesize},
 }
 %% Fila 1 — Cabecera
 \textbf{Código} & \textbf{Objetivo} & \textbf{Indicadores de Logro} & \textbf{Instrumentos de Evaluación} \\
 %% Fila 2 — OBJBACH-1
-{OBJ
-\newline BACH-1} &
+{OBJ \newline BACH-1} &
 \textbf{Aplicar los saberes básicos de programación estructurada} (variables, tipos, operadores, condicionales, bucles, funciones y structs) en la resolución de mecánicas concretas del videojuego. &
-\begin{minipage}[t]{\linewidth}\begin{itemize}
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
 \item El 80\,\% identifica y usa correctamente tipos de datos primitivos (\texttt{int}, \texttt{float}, \texttt{bool}, \texttt{string}) en sus ejercicios.
 \item El 75\,\% declara variables, constantes y structs sin errores de sintaxis relevantes.
 \item El 70\,\% implementa al menos una función con retorno que afecta al comportamiento del juego.
 \end{itemize}\end{minipage} &
-\begin{minipage}[t]{\linewidth}\begin{itemize}
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
 \item Rúbrica de ejercicios por escenas (UD11)
 \item Revisión del código entregado con comentarios
 \item Prueba escrita breve o tipo test (UD12)
 \end{itemize}\end{minipage} \\
 %% Fila 3 — OBJBACH-2
-{OBJ
-\newline BACH-2}&
+{OBJ \newline BACH-2} &
 \textbf{Consolidar la retención mediante la práctica contextualizada y el razonamiento algorítmico previo}: diseñar antes de codificar (UD12) y verificar el resultado en el juego (UD11). &
-\begin{minipage}[t]{\linewidth}\begin{itemize}
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
 \item El 75\,\% aplica correctamente condicionales, bucles y funciones en la práctica funcional por escenas.
-\item El 70\,\% es capaz de elaborar un pseudocódigo o diagrama de flujo previo coherente con la solución implementada.
+\item El 70\,\% elabora un pseudocódigo o diagrama de flujo previo coherente con la solución implementada.
 \item El 80\,\% explica oralmente el funcionamiento de su código cuando se le pregunta de forma individual.
 \end{itemize}\end{minipage} &
-\begin{minipage}[t]{\linewidth}\begin{itemize}
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
 \item Tarea corta de algoritmos, diagramas y pseudocódigo (UD12)
 \item Rúbrica de proyecto funcional por escenas (UD11)
 \item Observación directa y comprobación oral puntual
 \end{itemize}\end{minipage} \\
 %% Fila 4 — OBJBACH-3
-{OBJ
-\newline BACH-3} &
+{OBJ \newline BACH-3} &
 \textbf{Incrementar la percepción de utilidad de la programación} conectando los saberes básicos curriculares con un contexto motivador y visible: cada función que el alumno escribe desbloquea una mecánica real del videojuego. &
-\begin{minipage}[t]{\linewidth}\begin{itemize}
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
 \item Incremento de al menos 2 puntos (sobre 5) en la percepción de utilidad según cuestionario pre/post.
 \item El 85\,\% del alumnado manifiesta que «ahora entiende para qué sirve programar» al finalizar la propuesta.
-\item Al menos el 60\,\% comenta espontáneamente su proyecto con personas de su entorno (indicador de conexión emocional).
+\item Al menos el 60\,\% comenta espontáneamente su proyecto con personas de su entorno.
 \end{itemize}\end{minipage} &
-\begin{minipage}[t]{\linewidth}\begin{itemize}
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
 \item Cuestionario de motivación y percepción de utilidad (pre y post, escala Likert 1--5)
 \item Registro de comentarios espontáneos en clase
 \item Encuesta de satisfacción al cierre del bloque
 \end{itemize}\end{minipage} \\
-\end{longtblr}
+%% Fila 5 — OBJBACH-4
+{OBJ \newline BACH-4} &
+\textbf{Garantizar que los materiales se adapten a la diversidad del aula} mediante un diseño estructural inclusivo: fragmentación de ejercicios, anticipación de tareas, ritmo flexible y ampliación integrada, sin diferenciar visiblemente al alumnado. &
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+\item El 90\,\% del alumnado completa al menos la mitad de los ejercicios obligatorios sin requerir adaptación individualizada explícita.
+\item Ningún alumno queda bloqueado de forma permanente por ausencia a una sesión, gracias a la redundancia de saberes entre UD12 y UD11.
+\item El alumnado que termina antes dispone siempre de ejercicios de ampliación en \texttt{PlayerScript} sin necesidad de intervención docente adicional.
+\end{itemize}\end{minipage} &
+\begin{minipage}[t]{\linewidth}\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+\item Observación directa del ritmo y autonomía de trabajo en cada sesión
+\item Registro de entregas completadas y pendientes por alumno
+\item Cuestionario de satisfacción con el formato de los materiales (cierre de bloque)
+\end{itemize}\end{minipage} \\
+\end{tblr}
 \vspace{0.3cm}
 
-Respecto a \textbf{OBJBACH-1, OBJBACH-2 y OBJBACH-3}, estos se encuentran presentes en todas las actividades prácticas del anexo que cuentan con soporte audiovisual mediante simulación de videojuegos. Su cobertura abarca las dos unidades del bloque de programación: la Unidad~12 trabaja el diseño algorítmico previo ---pseudocódigo, diagramas de flujo, fragmentación de problemas y depuración guiada--- mientras que la Unidad~11 traslada ese razonamiento al código real mediante el desarrollo funcional por escenas. Este orden deliberado permite que el alumnado llegue a la escritura de código con una lógica ya interiorizada, reduciendo la frustración inicial y mejorando la capacidad de depuración autónoma. Se han incluido también ejercicios de corte más convencional ---preguntas de síntaxis, identificación de errores y estructuras descontextualizadas--- con el propósito de preparar al alumnado para contextos de evaluación típicos en educación superior y ciclos de FP avanzados, donde la abstracción y la descontextualización son más prevalentes.
-
+Respecto a \textbf{OBJBACH-1, OBJBACH-2 y OBJBACH-3}, estos se encuentran presentes en todas las actividades prácticas del anexo que cuentan con soporte audiovisual mediante simulación de videojuegos. Su cobertura abarca las dos unidades del bloque de programación: la Unidad~12 trabaja el diseño algorítmico previo ---pseudocódigo, diagramas de flujo, fragmentación de problemas y depuración guiada--- mientras que la Unidad~11 traslada ese razonamiento al código real mediante el desarrollo funcional por escenas. Se han incluido también ejercicios de corte más convencional con el propósito de preparar al alumnado para contextos de evaluación típicos en educación superior y ciclos de FP avanzados, donde la abstracción y la descontextualización son más prevalentes. \textbf{OBJBACH-4} actúa de forma transversal: no depende de una sesión concreta, sino que se materializa en el propio diseño estructural de los materiales y en la dinámica de trabajo que se mantiene estable a lo largo de todo el bloque.
 \subsection{Evaluación de la motivación y de la experiencia}
 
 \subsection{Limitaciones del test y mejora}
