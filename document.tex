@@ -152,6 +152,13 @@
 % ─── Secciones profundas (hasta nivel 5) ────────────────────────────
 \usepackage{titlesec}
 
+% ─── Sección como hipervínculo al inicio de la misma ─────────────
+\let\oldsection\section
+\renewcommand{\section}[1]{%
+  \oldsection{#1}%
+  \hypertarget{section:\thesection}{}%
+}
+
 \titleclass{\subsubsubsection}{straight}[\subsubsection]
 \newcounter{subsubsubsection}[subsubsection]
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
@@ -180,8 +187,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\leftmark}
-\fancyhead[R]{\textbf{\thepage}}
+\fancyhead[L]{\hyperlink{section:\thesection}{\leftmark}}
+\fancyhead[R]{\hyperlink{toc}{\textbf{\thepage}}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection.\ #1}}}
 \setlength{\headheight}{15pt}
 
@@ -218,7 +225,10 @@
 \newpage
 
 
+\hypertarget{toc}{}
 \tableofcontents
+
+\newpage
 
 \section{Resumen y palabras clave}
 
