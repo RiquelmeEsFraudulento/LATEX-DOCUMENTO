@@ -912,7 +912,7 @@ el combate es el protagonista.
 \subsubsubsection{Armas y ataques}
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[2.2,l,m] X[2.5,l,m] X[4.5,l,m]},
     rowsep  = 5pt,
@@ -993,7 +993,7 @@ Objetos
   & Cambiar objeto seleccionado \\
   & \texttt{Pulsar Scroll}
   & Usar el objeto seleccionado \\
-\end{tblr}
+\end{longtblr}
 
 \subsubsection{Estados alterados}
 
@@ -1014,7 +1014,7 @@ Los enemigos pueden sufrir dos efectos que el alumno programa desde cero:
 El jugador puede recoger y usar cuatro objetos distintos a lo largo de la aventura:
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[2,l,m] X[5,l,m]},
     rowsep  = 5pt,
@@ -1039,7 +1039,7 @@ Life Steal & Mientras está activo, una fracción del daño infligido se convier
 Potion & Cura al jugador de forma gradual (HoT: \textit{Heal over Time}) durante varios segundos \\
 Life Stone & Curación instantánea más un efecto de regeneración continua; solo disponible una vez por escena \\
 Chaos & Reduce la vida de todos los enemigos a la mitad (mínimo 1). Si alguno queda con 1 HP exacto, el jugador recibe una penalización \\
-\end{tblr}
+\end{longtblr}
 
 \subsubsubsection{La mecánica clave: el color lo es todo}
 
@@ -1106,7 +1106,7 @@ El proyecto conecta directamente con los contenidos del Bloque de Programación 
 andaluz de TIC I para 1.º de Bachillerato. Se trabajan de forma integrada:
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[3,l,m] X[5,l,m]},
     rowsep  = 5pt,
@@ -1137,7 +1137,7 @@ Estructuras repetitivas (for, while) & Recorrer lista de enemigos, simular turno
 Funciones con y sin retorno & \texttt{EsColorVulnerable()}, \texttt{ProcesarEfecto()}, \texttt{TurnosHastaMatar()} \\
 Structs como agrupación de datos & \texttt{FichaEnemigo}, \texttt{FichaRapier}, \texttt{ColorRGB} \\
 Abstracción y encapsulación & Funciones \texttt{Debug*()} de caja negra; Bloque~3 invisible al alumno \\
-\end{tblr}
+\end{longtblr}
 
 
 
@@ -1220,7 +1220,7 @@ Al superar esta escena el alumno desbloquea narrativamente la habilidad de
 
 \vspace{0.5em}
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
   width = \textwidth,
   colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
   rowsep = 3pt, colsep = 2pt,
@@ -1292,7 +1292,7 @@ Escena 2 — Funciones a implementar \\
   \texttt{ActualizarEstadoMuerte} detecta la transición vivo→muerto
   sin repetir la notificación cada frame. &
   35--50 min & \texttt{if}, \texttt{bool}, transición de estados & Medio \\
-\end{tblr}
+\end{longtblr}
 
 %──────────────────────────────────────────
 \hypertarget{esc3}{\subsubsection{Escena 3 — Los peluches Mousey}}
@@ -1311,7 +1311,7 @@ porque sin ellos no puede derrotar a los ratones.
 
 \vspace{0.5em}
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
   width = \textwidth,
   colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
   rowsep = 3pt, colsep = 2pt,
@@ -1356,7 +1356,7 @@ Escena 3 — Funciones a implementar \\
   Recorre los tipos de daño vulnerables del enemigo y comprueba si el
   color del sable está entre ellos. Sin esta función el ratón es invencible. &
   25--35 min & \texttt{for}, \texttt{enum}$\to$\texttt{int} & Medio \\
-\end{tblr}
+\end{longtblr}
 
 %──────────────────────────────────────────
 \hypertarget{esc4}{\subsubsection{Escena 4 — Las figuras de Fernando Alonso}}
@@ -1389,7 +1389,7 @@ aprendido en la escena~3 con los nuevos efectos, reforzando la transferencia.
 
 \vspace{0.5em}
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
   width = \textwidth,
   colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
   rowsep = 3pt, colsep = 2pt,
@@ -1464,7 +1464,7 @@ Escena 4 — Funciones a implementar \\
   Simula N golpes de sangrado y acumula el daño total de todas las
   explosiones, reiniciando el contador tras cada una. &
   30--40 min & \texttt{for}, acumulador, simulación & Difícil \\
-\end{tblr}
+\end{longtblr}
 
 %──────────────────────────────────────────
 \hypertarget{esc5}{\subsubsection{Escena 5 — Los maniquís y el sistema de niveles}}
@@ -1485,7 +1485,7 @@ En esta escena también se completan los ejercicios de inventario que quedaron
 pendientes en la escena~2: el sorteo de loot aleatorio al derrotar enemigos y el
 sistema de pesos de probabilidad interpolados según el nivel del jugador.
 
-\begin{tblr}{
+\begin{longtblr}{
   width = \textwidth,
   colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
   rowsep = 3pt, colsep = 2pt,
@@ -1551,7 +1551,7 @@ Escena 5 — Funciones a implementar \\
   Multiplicador de XP por escena y ronda, XP ganada con mínimo garantizado,
   subida de nivel en bucle y orquestación del proceso completo. &
   105--140 min & \texttt{switch}, \texttt{while}, \texttt{if} & Medio \\
-\end{tblr}
+\end{longtblr}
 
 %──────────────────────────────────────────
 \hypertarget{esc6}{\subsubsection{Escena 6 — El boss final}}
@@ -1576,7 +1576,7 @@ implementado con éxito todo el flujo de programación del proyecto.
 
 \vspace{0.5em}
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
   width = \textwidth,
   colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
   rowsep = 3pt, colsep = 2pt,
@@ -1639,7 +1639,7 @@ Escena 6 — Funciones a implementar \\
   \texttt{GolpesFaltantesParaEstado} y \texttt{EstadoAplicarSegunGolpes}:
   calculan cuánto falta al umbral de~8 y deciden qué estado aplicar. &
   40--55 min & \texttt{if}, \texttt{switch}, constantes & Medio \\
-\end{tblr}
+\end{longtblr}
 
 %──────────────────────────────────────────
 \subsubsection{El script del jugador como recurso de ampliación}
@@ -1698,7 +1698,7 @@ Por su parte, la versión con soluciones cumple varias funciones complementarias
 Los manuales de ejercicios y los archivos de prueba están organizados según el bloque editable al que pertenecen dentro del proyecto. Esta división no solo mejora la claridad del conjunto, sino que además facilita que el profesorado seleccione con rapidez el material que necesita en cada momento.
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[1.8,l,m] X[2.6,l,m] X[2.2,l,m]},
     rowsep  = 4pt,
@@ -1718,7 +1718,7 @@ Manual & Contenido principal & Script o bloque \\
 \href{run:Manual de Ejercicios/Con Soluciones/PlayerUISoluciones.pdf}{PlayerUISoluciones} & Interfaz, objetos y elementos de apoyo visual para el jugador & \href{run:Manual de Ejercicios/PlayerUI.pdf}{PlayerUI} \\
 \href{run:Manual de Ejercicios/Con Soluciones/DamageableSoluciones.pdf}{DamageableSoluciones} & Vida de enemigos, daño recibido y estados alterados & \href{run:Manual de Ejercicios/Damageable.pdf}{Damageable} \\
 \href{run:Manual de Ejercicios/Con Soluciones/PlayerHealthSoluciones.pdf}{PlayerHealthSoluciones} & Nivel, vida del jugador y progresión asociada & \href{run:Manual de Ejercicios/PlayerHealth.pdf}{PlayerHealth} \\
-\end{tblr}
+\end{longtblr}
 
 Esta organización modular tiene una ventaja pedagógica evidente. El alumnado puede entender mejor qué parte del juego está modificando y el profesorado puede localizar con rapidez qué conjunto de ejercicios corresponde a cada bloque funcional. Además, esta estructura hace más sencillo introducir cambios de un curso a otro sin tener que rehacer todos los materiales.
 
@@ -2215,11 +2215,11 @@ La parte calificable se apoya en instrumentos distintos porque el aprendizaje qu
 En la Unidad~11, el instrumento principal es la práctica funcional por escenas, ya que el alumnado debe completar funciones concretas y comprobar después que el personaje, los enemigos y los efectos del juego responden como se espera en cada situación. En la Unidad~12, en cambio, gana peso la formalización previa del pensamiento algorítmico mediante tareas cortas de algoritmos, diagramas de flujo, pseudocódigo y depuración guiada, porque esa unidad prepara la transición hacia la programación efectiva del videojuego. A ello se suma una prueba escrita breve o tipo test sobre conceptos clave, útil para comprobar comprensión individual de términos, estructuras y decisiones lógicas que después aparecen en los ejercicios prácticos.
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
-    colspec = {X[1.2,l,m] X[2.3,l,m] X[0.9,l,m] X[1.3,l,m] X[2.3,l,m]},
-    rowsep  = 4pt,
-    colsep  = 5pt,
+    colspec = {X[1.5,l,m] X[2.3,l,m] X[0.9,l,m] X[1.3,l,m] X[2.0,l,m]},
+    rowsep  = 2pt,
+    colsep  = 3pt,
     hlines  = {1pt, white},
     vlines  = {1pt, white},
     cell{2}{1} = {bg=headerblue,fg=white,font=\bfseries,halign=c,valign=m},
@@ -2253,7 +2253,7 @@ Instrumento & Qué valora & Unidad & Criterio(s) & Evidencias principales \\
 Rúbrica de ejercicios & Valora la correcta aplicación de condicionales, bucles, operadores y funciones; la legibilidad del código; el uso de comentarios; y la capacidad de localizar y corregir errores durante la resolución de escenas. & UD11 y parte aplicada de UD12. & 5.1 y 5.2 en UD11; 5.2 cuando la solución parte de un algoritmo previamente diseñado en UD12. & Funciones completadas, código coherente, depuración guiada y relación clara entre lo escrito y lo que sucede en pantalla. \\
 Prueba escrita breve o tipo test & Comprueba la comprensión individual de conceptos clave: algoritmo, fragmentación de problemas, pseudocódigo, diagramas de flujo, sintaxis básica, operadores y sentido de las estructuras de control. & Especialmente UD12, con refuerzo de UD11. & 5.2 de forma directa; 5.1 en los ítems de sintaxis y semántica básica. & Respuestas breves, interpretación de fragmentos de código y reconocimiento de errores frecuentes antes de programar. \\
 Recuperación integrada & Dado que ambas unidades comparten CE5 y vuelven a trabajar saberes del bloque TICO.1.E vinculados al diseño algorítmico, la programación estructurada y la depuración, la recuperación puede organizarse de manera integrada a través de entregas prácticas revisadas y correctamente resueltas. & UD11 y UD12. & 5.1 y 5.2, según la naturaleza de la tarea rehecha. & Nuevas entregas, corrección de ejercicios previos y demostración de que la solución ya está comprendida y funciona. \\
-\end{tblr}
+\end{longtblr}
 
 
 La rúbrica de ejercicios será, por tanto, el instrumento central de la calificación, porque es el que mejor recoge el núcleo de la propuesta: resolver pequeños problemas de programación dentro de un proyecto ya montado, con funciones concretas que deben producir un efecto funcional y visible. En esa rúbrica conviene incluir, al menos, cuatro dimensiones: corrección lógica de la solución, adecuación al criterio trabajado, legibilidad del código y capacidad de depuración. No basta con que el programa parezca funcionar en un caso aislado; también debe apreciarse que el alumno entiende por qué funciona, que ha respetado la estructura del ejercicio y que puede corregir errores cuando el comportamiento observado no coincide con el esperado.
@@ -2273,7 +2273,7 @@ Por último, debe quedar explicitado el mecanismo de recuperación entre las Uni
 \centering
 \small
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[1.4,c,m] X[8.6,l,m]},
     rowsep  = 5pt,
@@ -2304,7 +2304,7 @@ Puntuación & Descriptor de logro \\
 0.4 & El ejercicio no compila, aunque muestra un planteamiento relevante, una intención de resolución reconocible y comentarios que evidencian comprensión parcial del problema. \\
 0.2 & El ejercicio refleja un intento incompleto o muy incipiente, con avances aislados que no llegan a concretar una solución funcional. \\
 0.0 & No hay entrega evaluable, o bien la respuesta presentada no permite acreditar que el estudiante comprende el procedimiento ni es capaz de razonar sobre la solución de forma autónoma. \\
-\end{tblr}
+\end{longtblr}
 \end{table}
 
 
@@ -2406,11 +2406,11 @@ P5 &
 % ============================================================
 % RÚBRICA DEL EXAMEN DEL TEMA 12
 % ============================================================
-\begin{table}[ht]
+\begin{table}
 \centering
 \small
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[1.2,c,m] X[3.0,l,m] X[2.0,l,m] X[1.8,l,m]},
     rowsep  = 5pt,
@@ -2454,7 +2454,7 @@ Puntuación & Preguntas de depuración (saber básico 6) & Diagrama de flujo (sa
 0.5 & Identifica algunos errores pero no todos, o corrige bien pero sin explicar el razonamiento. & Diagrama parcialmente completo: faltan estructuras o hay errores lógicos en alguna rama. & Pseudocódigo que captura parte de la lógica pero omite pasos relevantes o mezcla estructuras de forma incorrecta. \\
 0.25 & Identifica al menos un error o realiza una corrección parcial acertada, pero sin profundidad. & Diagrama muy incompleto, con solo una parte bien resuelta (entrada, salida o una condición). & Pseudocódigo muy básico que solo refleja una parte del algoritmo (por ejemplo, la entrada/salida pero no el procesamiento). \\
 0.0 & No entrega o la respuesta no muestra comprensión del proceso de depuración. & No entrega o el diagrama no guarda relación con el problema planteado. & No entrega o el pseudocódigo no es comprensible ni guarda relación con el algoritmo. \\
-\end{tblr}
+\end{longtblr}
 \end{table}
 
 %% ============================================================
@@ -2507,7 +2507,8 @@ Operadores, funciones, algoritmos matemáticos básicos, números primos, progre
 \textbf{Damageable:} ejercicios 8 y 9. &
 TICO.1.E.1: E.1.4, E.1.6 &
 Condiciones compuestas, estados especiales, umbrales de activación, devolución de resultados mediante funciones y lógica final del boss. \\
-Transversal &
+{Transver
+\newline sal} &
 Todas las escenas se trabajan como bloques cerrados de lectura del problema, división en subfunciones, prueba, depuración y transferencia de patrones entre ejercicios. &
 TICO.1.E.2: E.2.1, E.2.2, E.2.3, E.2.4, E.2.5, E.2.6 &
 Enfoque top-down, fragmentación de problemas, reconocimiento de patrones, algoritmos, pseudocódigo, diagramas y depuración progresiva. \\
@@ -2522,7 +2523,7 @@ Enfoque top-down, fragmentación de problemas, reconocimiento de patrones, algor
 \centering
 \small
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
     colspec = {X[2.7,l,m] X[5.5,l,m] X[1.9,c,m] X[1.9,c,m]},
     rowsep  = 5pt,
@@ -2590,12 +2591,14 @@ Trabajo transversal durante toda la unidad: descomposición de problemas, patron
 Muy alta &
 15\% \\
 \textbf{Total} & & \textbf{100\%} \\
-\end{tblr}
+\end{longtblr}
 \end{table}
 
 \noindent\textit{Criterio de uso recomendado:} la rúbrica de ejercicios en C++ se aplica a cada ejercicio o bloque de ejercicios individualmente. La calificación final del asunto puede obtenerse agregando las evidencias por saber básico según la ponderación propuesta en la tabla anterior.
 \normalsize
 \end{comment}
+
+\normalsize
 
 \subsubsection{Evaluación no calificable}
 
@@ -2603,14 +2606,14 @@ Junto a la evaluación que desemboca en nota, conviene mantener una evaluación 
 
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
     width   = \textwidth,
-    colspec = {X[1.1,l,m] X[2.6,l,m] X[2.3,l,m] X[1.8,l,m]},
+    colspec = {X[1.6,l,m] X[2.6,l,m] X[2.2,l,m] X[1.4,l,m]},
     rowsep  = 4pt,
     colsep  = 5pt,
     hlines  = {1pt, white},
     vlines  = {1pt, white},
-    cell{1}{1} = {c=4}{bg=headerblue,fg=white,font=\large\bfseries,halign=c,valign=m},
+    cell{1}{1} = {c=4}{bg=headerblue,fg=white,font=\larg11e\bfseries,halign=c,valign=m},
     cell{2}{1} = {bg=headerblue,fg=white,font=\bfseries,halign=c,valign=m},
     cell{2}{2} = {bg=headerblue,fg=white,font=\bfseries,halign=c,valign=m},
     cell{2}{3} = {bg=headerblue,fg=white,font=\bfseries,halign=c,valign=m},
@@ -2644,7 +2647,7 @@ Productividad y autonomía & Ritmo de avance, capacidad para empezar una tarea s
 Coherencia entre trabajo en clase y en casa & Diferencia entre lo que el alumno es capaz de hacer durante la sesión y lo que entrega después, especialmente cuando en casa aparece un salto de nivel difícil de explicar por el trabajo observado previamente. & Sirve para detectar dependencia excesiva de ayudas externas o falta de autoría real en algunas entregas. & Nota cualitativa y contraste oral. \\
 Uso de inteligencia artificial y comprensión real & Se valora si el alumno utiliza apoyos externos como herramienta de consulta o si, por el contrario, entrega una solución que no sabe explicar, modificar ni depurar cuando se le pregunta por ella. & Aporta un criterio prudente para verificar autoría académica sin prohibir herramientas que pueden tener un uso formativo legítimo. & Registro de incidencias y comprobación oral. \\
 Respuesta al feedback & Grado en que el alumno aprovecha las correcciones del profesor, incorpora cambios y mejora versiones anteriores del ejercicio en nuevas sesiones. & Resulta especialmente útil para tutorías, porque muestra evolución real aunque la nota todavía no haya mejorado de manera inmediata. & Seguimiento acumulativo. \\
-\end{tblr}
+\end{longtblr}
 
 Dentro de esta evaluación no calificable, merecen una atención especial la productividad, la autonomía y la coherencia entre lo que el alumno hace en el aula y lo que entrega fuera de ella. La metodología descrita para el proyecto da mucho peso al acompañamiento docente por las mesas, a la observación del proceso de resolución y a la corrección de errores sobre la marcha, de modo que el profesor puede ver con bastante claridad si un estudiante progresa de forma consistente o si existe una distancia llamativa entre su desempeño presencial y el resultado final que presenta después. Ese contraste no debe utilizarse de forma automática para penalizar, pero sí como señal para abrir una verificación pedagógica prudente.
 
@@ -2991,7 +2994,7 @@ Finalmente, el \textbf{alcance curricular del TFM se ha acotado intencionadament
 Al inicio de este trabajo se identificaron tres problemáticas recurrentes en la enseñanza de programación en TIC~I: el \textbf{absentismo y la dilación en las entregas}, la \textbf{desmotivación por escasa percepción de utilidad} y las \textbf{barreras de acceso para el alumnado diverso}. La propuesta ha abordado las tres de forma directa.
 
 \noindent
-\begin{tblr}{
+\begin{longtblr}{
   width = \textwidth,
   colspec = {X[2,l,m] X[3,l,m] X[3,l,m]},
   rowsep = 5pt,
@@ -3017,7 +3020,7 @@ Problemática & Origen del problema & Respuesta de la propuesta \\
 Absentismo y dilación & Jerarquía implícita de las materias optativas; sesiones fragmentadas sin continuidad & Materiales autónomos (manuales, .cpp, vídeos) consultables fuera del aula; estructura por escenas que permite retomar exactamente donde se dejó \\
 Desmotivación y escasa utilidad percibida & Ejercicios descontextualizados sin conexión con intereses del alumnado & Cada función implementada produce un efecto visible en el videojuego; el código desbloquea el juego, no al revés \\
 Barreras para el alumnado diverso & Ritmo único, adaptaciones visibles, dependencia del acompañamiento docente & Diseño universal integrado: fragmentación, ritmo flexible, apoyos múltiples y vía alternativa sin Unity para contextos con limitaciones técnicas \\
-\end{tblr}
+\end{longtblr}
 
 % ────────────────────────────────────────────────────────────
 \subsection{Líneas de trabajo futuras}
