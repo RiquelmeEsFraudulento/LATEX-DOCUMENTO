@@ -180,29 +180,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-
-% Hipervínculo al TOC: guardamos el número de página como enlace
-\newcommand{\toclink}{\hyperlink{toc-anchor}{\textbf{\thepage}}}
-
-% Header izquierdo: nombre de la sección actual como enlace al inicio de la sección
-% \leftmark ya contiene "X. Título de la sección" gracias a \sectionmark
-\fancyhead[L]{\hyperref[currentsection]{\leftmark}}
-
-% Header derecho: número de página como hipervínculo al índice
-\fancyhead[R]{\toclink}
-
-% Marcamos la sección actual con una etiqueta dinámica
-\renewcommand{\sectionmark}[1]{%
-  \markright{\textbf{\thesection.\ #1}}%
-  \label{currentsection}%
-}
-
-% También marcamos las subsecciones para que el enlace sea más preciso
-\renewcommand{\subsectionmark}[1]{%
-  \label{currentsubsection}%
-}
-
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\textbf{\thepage}}
+\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection.\ #1}}}
 \setlength{\headheight}{15pt}
+
 % ─── Otros ──────────────────────────────────────────────────────────
 \usepackage{url}
 \usepackage{afterpage}
@@ -232,11 +214,11 @@
 \input{prefacios/prefacio}
 
 
+
 \newpage
-\phantomsection
-\hypertarget{toc-anchor}{}
+
+
 \tableofcontents
-\newpage
 
 \section{Resumen y palabras clave}
 
@@ -2712,13 +2694,13 @@ Escena 6 — Funciones a implementar \\
   Decide si el golpe se ignora, despierta al boss, lo desconfunde, lo
   bloquea o lo mata, según en qué fase se encuentre. &
   25--35 min & \texttt{if} encadenados, funciones auxiliares & Medio \\
-\texttt{Comprobar
-\newline VulnerabilidadEJ} &
+\texttt{ComprobarVul
+\newline nerabilidadEJ} &
   Devuelve \texttt{true} solo si el boss ya completó tanto Sleep como
   Confused. Usa el operador lógico \texttt{\&\&}. &
   10--15 min & \texttt{if}, operador \texttt{\&\&} & Fácil \\
-\texttt{GolpesFaltantes
-\newline Sleep} &
+\texttt{GolpesFaltan
+\newline tesSleep} &
   Calcula cuántos golpes faltan para llegar al umbral de~8 y aplicar
   Sleep. Si ya se superó, devuelve~0. &
   15--20 min & \texttt{if}, aritmética & Fácil \\
