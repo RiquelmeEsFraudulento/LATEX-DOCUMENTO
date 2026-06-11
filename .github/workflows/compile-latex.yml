@@ -2,9 +2,9 @@ name: Compilar LaTeX a PDF
 
 on:
   push:
-    branches: [main, pruebasconelindice, master]
+    branches: [main, pruebasconelindice, alternativa, master]
   pull_request:
-    branches: [main, pruebasconelindice, master]
+    branches: [main, pruebasconelindice, alternativa, master]
   workflow_dispatch:
 
 jobs:
