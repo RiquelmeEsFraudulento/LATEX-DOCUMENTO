@@ -851,14 +851,50 @@ Life Stone & Curación instantánea más un efecto de regeneración continua; so
 Chaos & Reduce la vida de todos los enemigos a la mitad (mínimo 1). Si alguno queda con 1 HP exacto, el jugador recibe una penalización \\
 \end{longtblr}
 
-\subsubsubsection{La mecánica clave: el color lo es todo}
+\subsubsection{Programar para avanzar: la lógica detrás de cada escena}
 
-En la Escena~4 el jugador se enfrenta a los ratones de colores. Cada ratón solo puede recibir
-daño del color que le corresponde: un ratón rojo solo es vulnerable al sable rojo, uno azul al
-azul y uno gris al gris. \textbf{Para superar esa escena hay que programar la función
-\texttt{EsColorVulnerable}}, que comprueba si el color del sable coincide con el color del
-enemigo. Sin ese código funcionando, los golpes no hacen daño y la puerta a la siguiente fase
-permanece bloqueada. Esta es la esencia del proyecto: la programación desbloquea el juego.
+A partir de la Escena~3, el juego deja de ser una demostración y se convierte
+en un contrato: si el código no funciona, la puerta no se abre. Cada escena
+exige implementar algo concreto para poder pasar a la siguiente, y esa
+progresión no es arbitraria, cada mecánica nueva descansa sobre lo que
+el alumno ya sabe hacer.
+
+En la Escena~3, los peluches Mousey presentan la primera regla de
+vulnerabilidad por color: cada ratón solo recibe daño del sable que
+coincide con el suyo, rojo con rojo, azul con azul, gris con gris.
+\textbf{Para superarla hay que programar \texttt{EsColorVulnerable}},
+que recorre la lista de tipos vulnerables del enemigo y comprueba si
+el color del sable está entre ellos. Sin esa función, los golpes no
+hacen nada y el combate es imposible de ganar.
+
+La Escena~4 añade una capa: las figuritas de Fernando Alonso también
+tienen colores, pero ahora el arma que importa es el Rapier y sus tres
+modos. La figura \textit{verde} solo es vulnerable al modo Normal
+(tecla~4); la \textit{morada}, al modo Veneno (tecla~5), que quita
+0{,}5 puntos de vida por segundo durante 6 segundos; y la
+\textit{naranja}, al modo Sangrado (tecla~6), cuyo contador explota
+al quinto golpe con 3 puntos de daño extra. Esto obliga a combinar
+lo aprendido en la Escena~3 con los nuevos efectos acumulativos, y
+todas esas funciones, \texttt{ProcesarVenenoPorTiempo},
+\texttt{ComprobarExplosionSangrado} y \texttt{CalcularDanyoSangradoTotal},
+tienen que estar implementadas para que los enemigos reaccionen como deben.
+
+En la Escena~5, los maniquís directamente no se pueden dañar si el nivel
+del jugador es inferior a~5. Para subir de nivel hay que acumular
+experiencia, y cada umbral corresponde al siguiente número primo
+multiplicado por diez, lo que obliga a implementar \texttt{EsPrimo} y
+la cadena matemática completa del sistema de progresión.
+
+El Boss de la Escena~6 lleva esta idea al límite: no recibe ningún
+daño hasta haber pasado por los estados de \textit{Sleep} (dormido)
+y \textit{Confused} (confundido), en ese orden. Para activar cada
+uno, el jugador tiene que acumular 8 golpes con el estado especial
+seleccionado. Solo cuando el boss ha sido dormido y luego confundido
+queda vulnerable al golpe final. Las funciones
+\texttt{ComprobarVulnerabilidadEJ} y \texttt{ProcesarEstadoEspecial}
+son las que deciden si ya se cumplen ambas condiciones. Esta es la
+esencia de todo el proyecto: la programación desbloquea el juego,
+y no hay ningún atajo.
 
 % ===== SECCIÓN 4: ALGORITMOS PRIMERO, LENGUAJES DESPUÉS =====
 \subsubsection{Primero los algoritmos, luego los lenguajes}
@@ -2667,50 +2703,51 @@ B3 & ¿Qué es lo que más te llevas de este bloque? \\
 
 \section{Conclusiones}
 
+
 \subsection{Resumen de aportaciones}
 
-La enseñanza de programación en \mbox{TIC~I} de \mbox{1.º} de Bachillerato arrastra dos problemas bien documentados: la percepción de inutilidad de los ejercicios descontextualizados y la frustración programática que lleva al abandono o a la copia. Esta propuesta aborda ambos frentes mediante un proyecto de Unity encapsulado —\textit{Ninja: Crónicas de lo Inerte}— que actúa como eje vertebrador de todo el bloque de programación, sustituyendo los ejercicios abstractos por funciones concretas cuyo efecto es visible e inmediato dentro del videojuego.
+La enseñanza de programación en \mbox{TIC~I} de \mbox{1.º} de Bachillerato arrastra dos problemas bien documentados: la percepción de inutilidad en los ejercicios descontextualizados y la frustración que acaba en abandono o en copia. Esta propuesta afronta los dos a la vez con un proyecto de Unity encapsulado, \textit{Ninja: Crónicas de lo Inerte}, que actúa como eje del bloque de programación. En lugar de ejercicios abstractos, el alumno rellena funciones concretas cuyo resultado es visible e inmediato dentro del videojuego.
 
-La propuesta se articula en dos Unidades Didácticas: la \textbf{Unidad 12} (\textit{Preprogramación, algoritmos y depuración}), donde el alumnado trabaja el pensamiento algorítmico —diagramas de flujo, pseudocódigo, depuración guiada— antes de tocar código real; y la \textbf{Unidad 11} (\textit{Programación estructurada por escenas}), donde ese razonamiento previo se traslada directamente a las funciones del videojuego. El alumno nunca configura el motor: solo rellena bloques de lógica en C básico —condicionales, bucles, funciones, structs— y comprueba al instante si su ninja envenena al enemigo, acumula golpes de sangrado o derrota al boss final.
+La propuesta se articula en dos unidades didácticas. La \textbf{Unidad 12} (\textit{Preprogramación, algoritmos y depuración}) dedica tiempo al pensamiento algorítmico antes de que el alumno toque código real: diagramas de flujo, pseudocódigo, depuración guiada. La \textbf{Unidad 11} (\textit{Programación estructurada por escenas}) traslada ese razonamiento previo directamente a las funciones del videojuego. El alumno no configura el motor en ningún momento: solo rellena bloques de lógica en C básico (condicionales, bucles, funciones, structs) y comprueba al instante si su ninja envenena al enemigo, acumula golpes de sangrado o derrota al boss final.
 
-Para hacer viable esta dinámica en un aula real, la propuesta desarrolla un ecosistema de \textbf{materiales educativos en abierto}: el proyecto Unity listo para descargar, manuales de ejercicios con su versión de soluciones comentadas, archivos \texttt{.cpp} de prueba, scripts de compilación \texttt{.sh}, vídeos de demostración y orientaciones metodológicas para el profesorado. Todo el conjunto se publica bajo licencia abierta en un repositorio GitHub para facilitar su reutilización, adaptación y mejora por parte de otros docentes.
+Para que esta dinámica funcione en un aula real, la propuesta incluye un ecosistema completo de \textbf{materiales educativos en abierto}: el proyecto Unity listo para descargar, manuales de ejercicios con su versión de soluciones comentadas, archivos \texttt{.cpp} de prueba, scripts de compilación \texttt{.sh}, vídeos de demostración y orientaciones para el profesorado. Todo se publica bajo licencia abierta en un repositorio de GitHub para que otros docentes puedan reutilizarlo, adaptarlo y mejorarlo.
 
-Respecto a una unidad de programación convencional, la propuesta supone tres avances concretos. Primero, \textbf{motivación}: cada función implementada desbloquea una mecánica de juego, lo que transforma la pregunta \textit{«¿para qué me sirve esto?»} en una respuesta inmediata y tangible. Segundo, \textbf{visualización}: la abstracción del código se ancla en un resultado gráfico observable, reduciendo la distancia entre el símbolo y su significado. Tercero, \textbf{inclusión}: la fragmentación de tareas, los apoyos multipresenciales —vídeos, manual impreso, compiladores en línea— y el ritmo flexible por escenas permiten que el alumnado diverso avance sin que las adaptaciones generen diferenciación visible entre compañeros.
+Frente a una unidad de programación convencional, la propuesta aporta tres cosas concretas. Primera, \textbf{motivación}: cada función implementada desbloquea una mecánica de juego, de modo que la pregunta \textit{«¿para qué me sirve esto?»} tiene una respuesta inmediata y tangible. Segunda, \textbf{visualización}: la abstracción del código se ancla en un resultado gráfico observable, lo que reduce la distancia entre el símbolo y su significado. Tercera, \textbf{inclusión}: la fragmentación de tareas, los apoyos multipresenciales (vídeos, manual impreso, compiladores en línea) y el ritmo flexible por escenas permiten avanzar al alumnado diverso sin que las adaptaciones generen diferenciación visible entre compañeros.
 
-% ────────────────────────────────────────────────────────────
+
 \subsection{Fortalezas}
 
 \begin{enumerate}
 
-  \item \textbf{El código desbloquea el juego: motivación intrínseca garantizada por diseño.}
-  La mecánica central de la propuesta —ningún avance sin programar— convierte cada función en una recompensa concreta. No se trata de ofrecer un premio externo al final del tema, sino de que la propia lógica del videojuego quede bloqueada hasta que el alumno complete su código. Esa retroalimentación inmediata activa la motivación intrínseca que la literatura sobre DGBL identifica sistemáticamente como uno de los factores más robustos de aprendizaje efectivo en contextos técnicos.
+  \item \textbf{El código desbloquea el juego.}
+  La mecánica central de la propuesta es que no hay avance sin programar. Cada función se convierte así en una recompensa concreta, no en un premio externo al final del tema: la propia lógica del videojuego queda bloqueada hasta que el alumno completa su código. Esa retroalimentación inmediata activa la motivación intrínseca que la literatura sobre DGBL identifica como uno de los factores más robustos de aprendizaje efectivo en contextos técnicos.
 
-  \item \textbf{Pensamiento algorítmico antes que sintaxis: la secuencia didáctica está invertida de forma consciente.}
-  Frente al modelo habitual —aprender sintaxis y luego buscarle utilidad—, esta propuesta antepone la Unidad 12 de diseño algorítmico. El alumno llega a la Unidad 11 con un mapa mental claro de lo que debe implementar. Cuando ve un bucle \texttt{for} en el ejercicio de veneno, ya sabe qué problema resuelve porque lo ha esquematizado en pseudocódigo días antes. Esa transferencia reduce significativamente la frustración inicial y acelera el aprendizaje en las sesiones de código real.
+  \item \textbf{Pensamiento algorítmico antes que sintaxis.}
+  El modelo habitual consiste en aprender sintaxis y luego buscarle utilidad. Esta propuesta lo invierte: la Unidad 12 de diseño algorítmico va primero. Cuando el alumno llega a la Unidad 11, ya tiene un mapa mental claro de lo que debe implementar. Al ver un bucle \texttt{for} en el ejercicio de veneno, sabe qué problema resuelve porque lo ha esquematizado en pseudocódigo días antes. Esa transferencia reduce la frustración inicial y acelera el trabajo en las sesiones de código real.
 
-  \item \textbf{Encapsulación del motor: el alumno trabaja con lógica real sin verse desbordado por Unity.}
-  La complejidad de Unity —ciclo de vida de componentes, físicas, animaciones, cambio de escenas— está completamente construida y oculta al alumno. Lo que el estudiante ve y toca son funciones cortas en C básico, nombradas de forma descriptiva, con comentarios en cada línea no trivial. Esta separación entre «lo que tengo que programar» y «lo que ya está resuelto» es pedagógicamente poderosa: respeta el límite cognitivo del alumnado de Bachillerato y al mismo tiempo le da agencia real sobre el comportamiento del videojuego.
+  \item \textbf{Encapsulación del motor: lógica real sin verse desbordado por Unity.}
+  La complejidad de Unity (ciclo de vida de componentes, físicas, animaciones, cambio de escenas) está completamente construida y oculta al alumno. Lo que el estudiante ve y toca son funciones cortas en C básico, con nombres descriptivos y comentarios en cada línea no trivial. Separar «lo que tengo que programar» de «lo que ya está resuelto» es pedagógicamente útil: respeta el límite cognitivo del alumnado de Bachillerato y al mismo tiempo le da agencia real sobre el comportamiento del videojuego.
 
-  \item \textbf{Ecosistema de materiales abiertos: cualquier docente puede adoptarlo sin dominar Unity.}
-  El proyecto no es un recurso monolítico. Incluye el proyecto base descargable, manuales con y sin soluciones, archivos de prueba \texttt{.cpp} que funcionan sin abrir el motor, scripts de compilación y vídeos de demostración. Esta arquitectura modular tiene una consecuencia práctica directa: un docente sin experiencia previa en Unity puede impartir la propuesta apoyándose en los archivos \texttt{.cpp} y los vídeos, reservando la demostración en el motor para quien pueda ejecutarlo. El material está pensado para sobrevivir a sus condiciones de contorno.
+  \item \textbf{Materiales abiertos que cualquier docente puede adoptar sin dominar Unity.}
+  El proyecto no es un recurso monolítico. Incluye el proyecto base descargable, manuales con y sin soluciones, archivos de prueba \texttt{.cpp} que funcionan sin abrir el motor, scripts de compilación y vídeos de demostración. Un docente sin experiencia previa en Unity puede impartir la propuesta apoyándose en los archivos \texttt{.cpp} y los vídeos, y reservar la demostración en el motor para quien pueda ejecutarlo. El material está pensado para sobrevivir a sus condiciones de contorno.
 
-  \item \textbf{Inclusión integrada en el diseño, no añadida como parche.}
-  Las adaptaciones para el alumnado diverso no son medidas externas ni visibles: emanan de decisiones estructurales del propio material. La fragmentación en funciones cortas y verificables beneficia especialmente al alumnado con TDAH sin señalarlo. El ritmo por escenas progresivas permite avanzar a velocidades distintas sin que nadie quede bloqueado ni etiquetado. Los apoyos visuales, los vídeos y los archivos de prueba ofrecen puertas de entrada alternativas sin romper la dinámica común de clase. El principio rector es el mismo material para todos, con adaptaciones ya integradas.
+  \item \textbf{Inclusión integrada en el diseño, no añadida después.}
+  Las adaptaciones para el alumnado diverso no son medidas externas: emanan de decisiones estructurales del material. La fragmentación en funciones cortas y verificables beneficia especialmente al alumnado con TDAH sin señalarlo. El ritmo por escenas progresivas permite avanzar a velocidades distintas sin que nadie quede bloqueado. Los apoyos visuales, los vídeos y los archivos de prueba ofrecen puertas de entrada alternativas sin romper la dinámica común de clase. El principio es el mismo material para todos, con adaptaciones ya integradas.
 
 \end{enumerate}
 
-% ────────────────────────────────────────────────────────────
+
 \subsection{Limitaciones}
 
-La principal limitación de este trabajo es la \textbf{ausencia de validación empírica con alumnado real}. El TFM se ha desarrollado fuera del periodo de prácticas docentes y no ha podido implementarse en un aula de \mbox{1.º} de Bachillerato durante el curso. Por tanto, las afirmaciones sobre motivación, ritmo de trabajo, tiempos estimados por ejercicio y respuesta del alumnado a la secuencia didáctica se basan en el marco teórico, en el análisis curricular y en el criterio profesional del autor, pero no están respaldadas por datos recogidos en campo. Esta circunstancia limita el alcance de las conclusiones: la propuesta está fundamentada y es coherente con la evidencia disponible, pero su efectividad real solo podrá afirmarse tras una implementación controlada en contexto escolar.
+La principal limitación de este trabajo es la \textbf{ausencia de validación empírica con alumnado real}. El TFM se ha desarrollado fuera del periodo de prácticas docentes y no ha podido implementarse en un aula de \mbox{1.º} de Bachillerato durante el curso. Las afirmaciones sobre motivación, ritmo de trabajo, tiempos estimados por ejercicio y respuesta del alumnado a la secuencia didáctica se basan en el marco teórico, en el análisis curricular y en el criterio profesional del autor, pero no están respaldadas por datos recogidos en campo. Esto limita el alcance de las conclusiones: la propuesta es coherente con la evidencia disponible, pero su efectividad real solo podrá afirmarse tras una implementación controlada en contexto escolar.
 
-Una segunda limitación es de carácter \textbf{técnico-material}. Dado que el proyecto base requiere Unity \mbox{6000.4.5f1} para ejecutarse correctamente, su uso en el aula está supeditado a que los ordenadores del centro tengan capacidad suficiente para correr el motor. Aunque la propuesta contempla una vía alternativa —trabajar directamente con los archivos \texttt{.cpp} y mostrar el comportamiento en Unity mediante vídeos o demostración en vivo en el ordenador del docente—, esta alternativa reduce parcialmente la experiencia interactiva que constituye uno de los principales valores motivacionales del proyecto. Los centros con equipos limitados deberán valorar cuál de las dos modalidades se adapta mejor a su infraestructura.
+Una segunda limitación es de carácter \textbf{técnico-material}. El proyecto base requiere Unity \mbox{6000.4.5f1} para ejecutarse correctamente, por lo que su uso en el aula depende de que los ordenadores del centro tengan capacidad suficiente para correr el motor. La propuesta contempla una vía alternativa (trabajar directamente con los archivos \texttt{.cpp} y mostrar el comportamiento en Unity mediante vídeos o demostración en vivo en el ordenador del docente), pero esta alternativa reduce parcialmente la experiencia interactiva que constituye uno de los principales valores motivacionales del proyecto. Los centros con equipos limitados tendrán que valorar cuál de las dos modalidades se adapta mejor a su infraestructura.
 
-En tercer lugar, las \textbf{adaptaciones para atención a la diversidad} de esta propuesta están diseñadas con un criterio de diseño universal: beneficiar a todos sin etiquetar a nadie. Ello implica que no se han desarrollado adaptaciones específicas para perfiles concretos como TDAH o TEA, que podrían requerir estrategias adicionales más personalizadas. Esta decisión responde a un principio pedagógico deliberado —evitar la estigmatización y mantener una dinámica de aula cohesionada—, pero reconoce que la adaptación fina a necesidades individuales muy específicas queda fuera del alcance del presente trabajo y constituye un campo de estudio propio.
+En tercer lugar, las \textbf{adaptaciones para atención a la diversidad} de esta propuesta parten de un criterio de diseño universal: beneficiar a todos sin etiquetar a nadie. Eso implica que no se han desarrollado adaptaciones específicas para perfiles concretos como TDAH o TEA, que podrían requerir estrategias adicionales más personalizadas. La decisión responde a un principio pedagógico deliberado (evitar la estigmatización y mantener una dinámica de aula cohesionada), pero reconoce que la adaptación fina a necesidades individuales muy concretas queda fuera del alcance de este trabajo y constituye un campo de estudio propio.
 
-Finalmente, el \textbf{alcance curricular del TFM se ha acotado intencionadamente} al bloque de programación, concretamente a las Unidades Didácticas 11 y 12. La Unidad 12 no genera una relación de ejercicios propia: su función es asentar el pensamiento algorítmico de forma dinámica —trabajo en parejas, debate, pseudocódigo informal— antes de que ese razonamiento se aplique en el código real de la Unidad 11. No se ha desarrollado material adicional más allá de ese planteamiento porque el foco innovador de la propuesta reside en la integración código-videojuego de la Unidad 11. El resto de los bloques de TIC~I no se abordan en profundidad, lo que significa que el proyecto no constituye una programación didáctica completa de la asignatura.
+Por último, el \textbf{alcance curricular del TFM se ha acotado intencionadamente} al bloque de programación, concretamente a las Unidades Didácticas 11 y 12. La Unidad 12 no genera una relación de ejercicios propia: su función es asentar el pensamiento algorítmico de forma dinámica (trabajo en parejas, debate, pseudocódigo informal) antes de que ese razonamiento se aplique en el código real de la Unidad 11. No se ha desarrollado material adicional más allá de ese planteamiento porque el foco innovador de la propuesta reside en la integración código-videojuego de la Unidad 11. El resto de los bloques de TIC~I no se abordan en profundidad, lo que significa que el proyecto no constituye una programación didáctica completa de la asignatura.
 
-% ────────────────────────────────────────────────────────────
+
 \subsection{Respuesta a las problemáticas iniciales}
 
 Al inicio de este trabajo se identificaron tres problemáticas recurrentes en la enseñanza de programación en TIC~I: el \textbf{absentismo y la dilación en las entregas}, la \textbf{desmotivación por escasa percepción de utilidad} y las \textbf{barreras de acceso para el alumnado diverso}. La propuesta ha abordado las tres de forma directa.
@@ -2744,25 +2781,24 @@ Desmotivación y escasa utilidad percibida & Ejercicios descontextualizados sin 
 Barreras para el alumnado diverso & Ritmo único, adaptaciones visibles, dependencia del acompañamiento docente & Diseño universal integrado: fragmentación, ritmo flexible, apoyos múltiples y vía alternativa sin Unity para contextos con limitaciones técnicas \\
 \end{longtblr}
 
-% ────────────────────────────────────────────────────────────
+
 \subsection{Líneas de trabajo futuras}
 
-El recorrido abierto por esta propuesta apunta en varias direcciones que merecen desarrollo posterior.
+Hay varias direcciones que merecen desarrollo posterior.
 
-La primera, dentro del propio currículo de TIC~I, es la \textbf{gamificación de la Unidad Didáctica 3 sobre arquitectura de ordenadores}, que se imparte a principio de curso —un momento estratégicamente ideal para establecer un clima motivador desde el inicio. Aunque ya se utiliza PCPartPicker\cite{pcpartpicker} como referencia visual, la incorporación de \textit{PC Building Simulator} (versión 1\cite{pcbs1}  o 2\cite{pcbs2}) permitiría que el alumnado montase virtualmente un ordenador de forma interactiva, conectando los contenidos de hardware con una experiencia simulada y significativa antes de abordar el software.
+La primera, dentro del propio currículo de TIC~I, es la \textbf{gamificación de la Unidad Didáctica 3 sobre arquitectura de ordenadores}, que se imparte a principio de curso, un momento estratégicamente bueno para establecer un clima motivador desde el inicio. Aunque ya se utiliza PCPartPicker\cite{pcpartpicker} como referencia visual, incorporar \textit{PC Building Simulator} (versión 1\cite{pcbs1} o 2\cite{pcbs2}) permitiría que el alumnado montase virtualmente un ordenador de forma interactiva, conectando los contenidos de hardware con una experiencia simulada y significativa antes de abordar el software.
 
-La segunda y más ambiciosa es el \textbf{desarrollo de una segunda parte del videojuego} en el marco de TIC~II. La historia de \textit{Ninja: Crónicas de lo Inerte} deja deliberadamente un final abierto que invita a la continuación. TIC~II cuenta con un bloque de programación más extenso y exclusivo que el de TIC~I —en TIC~I hay cinco bloques y solo uno de programación; en TIC~II hay tres bloques y el de programación es el más amplio—, lo que ofrece más tiempo y más profundidad para un proyecto de mayor envergadura. El alumnado que haya cursado TIC~I ya estará familiarizado con el entorno, reduciendo la barrera de entrada. En esta segunda entrega se podrían implementar mecánicas de mayor complejidad algorítmica:
+La segunda es el \textbf{desarrollo de una segunda parte del videojuego} en el marco de TIC~II. La historia de \textit{Ninja: Crónicas de lo Inerte} deja deliberadamente un final abierto que invita a la continuación. TIC~II tiene un bloque de programación más extenso y exclusivo que el de TIC~I: en TIC~I hay cinco bloques y solo uno de programación; en TIC~II hay tres bloques y el de programación es el más amplio. Eso ofrece más tiempo y más profundidad para un proyecto de mayor envergadura. El alumnado que haya cursado TIC~I ya conocerá el entorno, lo que reduce la barrera de entrada. En esta segunda entrega se podrían implementar mecánicas de mayor complejidad algorítmica:
 
 \begin{itemize}
   \item \textbf{Sistema de parries}: desviar un ataque en el momento exacto para quedar en ventaja y contraatacar.
   \item \textbf{Bonificadores} de velocidad de ataque y de daño acumulables.
-  \item \textbf{Sistema de tipos}: cada enemigo tiene un tipo propio; el daño infligido varía según la combinación arma-enemigo siguiendo una escala de eficacia —inefectivo (\(\times 0\)), apenas efectivo (\(\times 0{,}25\)), poco efectivo (\(\times 0{,}5\)), normal (\(\times 1\)), efectivo (\(\times 1{,}5\)), muy efectivo (\(\times 2\)) y superefectivo (\(\times 4\))—, inspirada en el sistema de daño de Pokémon.
-  \item \textbf{Sistema de adrenalina} al estilo de los \textit{Assassin's Creed} modernos: barra que se va llenando con esquivos, contraataques, parries y victorias. Cuando hay adrenalina suficiente y el ataque especial no está en cooldown, el jugador puede ejecutarlo consumiendo la barra y reiniciando el tiempo de espera.
+  \item \textbf{Sistema de tipos}: cada enemigo tiene un tipo propio; el daño infligido varía según la combinación arma-enemigo siguiendo una escala de eficacia, \(\times 0\), \(\times 0{,}25\), \(\times 0{,}5\), \(\times 1\), \(\times 1{,}5\), \(\times 2\) y \(\times 4\), inspirada en el sistema de daño de Pokémon.
+  \item \textbf{Sistema de adrenalina} al estilo de los \textit{Assassin's Creed} modernos: una barra que se llena con esquivos, contraataques, parries y victorias. Cuando hay adrenalina suficiente y el ataque especial no está en cooldown, el jugador puede ejecutarlo consumiendo la barra y reiniciando el tiempo de espera.
   \item \textbf{Árbol de mejoras progresivo}: funcionalidades que se desbloquean con el avance del juego y que son necesarias para superar escenas posteriores.
 \end{itemize}
 
-Desde el punto de vista pedagógico, la secuencia de TIC~II mantendría la misma lógica de esta propuesta: primero \textbf{Ingeniería del Software} y \textbf{Diseño de Software} —donde el alumnado diseñaría en papel lo que luego programaría—, y después el desarrollo en código aplicando metodologías reales de construcción de software. Esta estructura no solo refuerza la coherencia curricular entre ambos cursos, sino que prepara al alumnado para afrontar con solidez las etapas educativas posteriores.
-
+Desde el punto de vista pedagógico, la secuencia de TIC~II mantendría la misma lógica de esta propuesta: primero \textbf{Ingeniería del Software} y \textbf{Diseño de Software}, donde el alumnado diseñaría en papel lo que luego programaría, y después el desarrollo en código aplicando metodologías reales de construcción de software. Esta estructura refuerza la coherencia curricular entre ambos cursos y prepara al alumnado para afrontar con solidez las etapas educativas posteriores.
 \newpage
 
 \section{Bibliografía}
