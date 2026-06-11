@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,12pt]{article}
 
 % ─── Codificación e idioma ──────────────────────────────────────────
@@ -15,7 +16,7 @@
   %local orig = tex.runlocal
   %texconfig.max_print_line = 20000
 %}
-
+\usepackage{hyperref}
 % ─── Gráficos y figuras ─────────────────────────────────────────────
 \usepackage{graphicx}
 \usepackage{float}
@@ -62,6 +63,9 @@
 \definecolor{descriptbg}   {RGB}{180, 210, 245}
 \definecolor{grisclaro}    {RGB}{235,235,238}
 
+
+
+
 % ─── Tipografía y formato ───────────────────────────────────────────
 \usepackage{xcolor}
 \usepackage{microtype}
@@ -69,6 +73,8 @@
 \usepackage{parskip}
 
 \UseTblrLibrary{varwidth}
+
+
 
 % ─── Colores ────────────────────────────────────────────────────────
 \usepackage{xcolor}
@@ -79,6 +85,7 @@
 \definecolor{midblue}{RGB}{100, 150, 210}
 \definecolor{lightblue}{RGB}{210, 225, 245}
 \definecolor{verylightblue}{RGB}{235, 243, 255}
+
 
 \definecolor{gray97}{gray}{.97}
 \definecolor{gray75}{gray}{.75}
@@ -111,9 +118,9 @@
     numberfirstline=false,
     breaklines=true,
     literate=
-        {á}{'a}1 {é}{'e}1 {í}{'i}1 {ó}{'o}1 {ú}{'u}1
-        {Á}{'A}1 {É}{'E}1 {Í}{'I}1 {Ó}{'O}1 {Ú}{'U}1
-        {ñ}{~n}1 {Ñ}{~N}1
+        {á}{\'a}1 {é}{\'e}1 {í}{\'i}1 {ó}{\'o}1 {ú}{\'u}1
+        {Á}{\'A}1 {É}{\'E}1 {Í}{\'I}1 {Ó}{\'O}1 {Ú}{\'U}1
+        {ñ}{\~n}1 {Ñ}{\~N}1
         {¿}{{?`}}1,
 }
 
@@ -162,8 +169,8 @@
 \makeatletter
 \def\toclevel@subsubsubsection{4}
 \def\toclevel@subsubsubsubsection{5}
-\def\l@subsubsubsection{@dottedtocline{4}{7em}{4em}}
-\def\l@subsubsubsubsection{@dottedtocline{5}{10em}{5em}}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@subsubsubsubsection{\@dottedtocline{5}{10em}{5em}}
 \makeatother
 
 \setcounter{secnumdepth}{5}
@@ -171,29 +178,10 @@
 
 % ─── Cabeceras y pies de página ─────────────────────────────────────
 \usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{nameref}
-
-% Auto-etiquetado de secciones para hipervínculos
-\let\oldsection\section
-\renewcommand{\section}[1]{%
-  \oldsection{#1}%
-  \label{sec:\thesection}%
-}
-
 \pagestyle{fancy}
 \fancyhf{}
-
-% Header izquierdo: nombre de la sección actual (hipervínculo a la sección)
-\fancyhead[L]{%
-  \hyperref[sec:\thesection]{\nouppercase{\leftmark}}%
-}
-
-% Header derecho: número de página (hipervínculo al índice)
-\fancyhead[R]{%
-  \hyperref[tocpage]{\textbf{\thepage}}%
-}
-
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\textbf{\thepage}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection.\ #1}}}
 \setlength{\headheight}{15pt}
 
@@ -201,6 +189,7 @@
 \usepackage{url}
 \usepackage{afterpage}
 \usepackage[stable]{footmisc}
+\usepackage[pdfborder={0 0 0}]{hyperref}
 \usepackage{pdfpages}
 
 % ─── Metadatos del documento ────────────────────────────────────────
@@ -214,8 +203,7 @@
     pdfsubject  = {},
     pdfkeywords = {palabra1, palabra2, palabra3},
     pdfcreator  = {LaTeX},
-    pdfproducer = {pdflatex},
-    linktoc=all
+    pdfproducer = {pdflatex}
 }
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -225,10 +213,11 @@
 \input{portada/portada}
 \input{prefacios/prefacio}
 
+
+
 \newpage
 
 \tableofcontents
-\label{tocpage}  % Etiqueta para hipervínculo del header al índice
 
 \section{Resumen y palabras clave}
 
@@ -1697,7 +1686,6 @@ CE1. & & {\footnotesize TICO.1.E.2.6. Depuración.} \\
   
 \end{longtblr}
 
-\end{comment}
 \subsubsection{Programación didáctica de TIC I}
 
 La programación didáctica de TIC I se estructura en torno a 12 unidades didácticas, organizadas en 5 bloques temáticos
