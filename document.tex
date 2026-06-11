@@ -244,7 +244,7 @@
 
 \section{Resumen y palabras clave}
 
-Este Trabajo de Fin de Máster en la modalidad de Materiales presenta el diseño de una propuesta didáctica para la asignatura TIC I de 1.º de Bachillerato en Andalucía, cuyo eje central es la enseñanza de los fundamentos de programación a través de la creación guiada de un videojuego sencillo en el motor Unity. Ante problemáticas recurrentes en el aula —desmotivación, bloqueos cognitivos frente al código y escasa percepción de utilidad de la programación—, el trabajo propone encapsular la complejidad técnica propia de Unity en un esqueleto de código que el alumnado completa progresivamente con estructuras de control básicas: condicionales, bucles y funciones. El personaje tridimensional, importado desde Mixamo con sus animaciones ya configuradas, ofrece un feedback visual inmediato que transforma cada ejercicio de programación en una experiencia tangible y motivadora. El conjunto de materiales producidos —proyecto Unity, enunciados de ejercicios, soluciones comentadas y vídeos demostrativos— se distribuye bajo licencia Creative Commons para facilitar su reutilización y adaptación por parte de cualquier docente del territorio. La propuesta se contextualiza en la normativa educativa andaluza vigente y se alinea con los saberes básicos del Bloque E: Programación del currículo de TIC I, prestando especial atención a la atención a la diversidad y a la reducción del estigma asociado a las adaptaciones curriculares.
+Este Trabajo de Fin de Máster en la modalidad de Materiales presenta el diseño de una propuesta didáctica para la asignatura TIC I de 1.º de Bachillerato en Andalucía, cuyo eje central es la enseñanza de los fundamentos de programación a través de la creación guiada de un videojuego sencillo en el motor Unity. Ante problemáticas recurrentes en el aula —desmotivación, bloqueos cognitivos frente al código y escasa percepción de utilidad de la programación—, el trabajo propone encapsular la complejidad técnica propia de Unity en un esqueleto de código que el alumnado completa progresivamente con estructuras de control básicas: condicionales, bucles y funciones. El personaje tridimensional, importado desde Mixamo\cite{mixamoDocs}  con sus animaciones ya configuradas, ofrece un feedback visual inmediato que transforma cada ejercicio de programación en una experiencia tangible y motivadora. El conjunto de materiales producidos —proyecto Unity, enunciados de ejercicios, soluciones comentadas y vídeos demostrativos— se distribuye bajo licencia Creative Commons para facilitar su reutilización y adaptación por parte de cualquier docente del territorio. La propuesta se contextualiza en la normativa educativa andaluza vigente y se alinea con los saberes básicos del Bloque E: Programación del currículo de TIC I, prestando especial atención a la atención a la diversidad y a la reducción del estigma asociado a las adaptaciones curriculares.
 
 Palabras clave: gamificación, Digital Game-Based Learning, Unity, programación, TIC I, Bachillerato, encapsulación, Mixamo, recursos educativos en abierto, atención a la diversidad.
 
@@ -401,7 +401,7 @@ reproducibles en el aula convencional.
 Varios videojuegos comerciales han sido objeto de investigación rigurosa por su
 potencial para desarrollar competencias técnicas y científicas de alto nivel.
 
-\textbf{Kerbal Space Program (KSP)} ha sido empleado en la enseñanza de física
+\textbf{Kerbal Space Program (KSP)} \cite{ksp} ha sido empleado en la enseñanza de física
 e ingeniería aeroespacial. Un estudio presentado en el \textit{Australian
 International Aerospace Congress} de 2023 demuestra que KSP promueve la
 comprensión de conceptos de mecánica orbital, propulsión y dinámica de vuelo
@@ -409,7 +409,7 @@ en estudiantes de ingeniería, generando un aprendizaje situado que ningún libr
 de texto puede replicar con la misma vivencia experimental
 \cite{ksp2023aiac}.
 
-\textbf{Factorio}, centrado en la automatización industrial y la optimización
+\textbf{Factorio} \cite{factorio}, centrado en la automatización industrial y la optimización
 logística, ha encontrado también su hueco académico. Una experiencia de aula
 presentada ante la \textit{American Society for Engineering Education} (ASEE)
 empleó el juego como simulador de sistemas de producción e inventario,
@@ -421,7 +421,7 @@ flujos, cadenas de producción y optimización de recursos constituye un entorno
 de aprendizaje auténtico para competencias de automatización
 \cite{factorio2025ieee}.
 
-\textbf{Portal~2} ha sido investigado en profundidad como herramienta para
+\textbf{Portal~2} \cite{portal2} ha sido investigado en profundidad como herramienta para
 evaluar y desarrollar la inteligencia fluida y la resolución de problemas. Shute
 y Wang (2015) analizaron las habilidades de resolución de problemas emergentes
 durante la partida, identificando indicadores medibles embebidos en el propio
@@ -436,7 +436,7 @@ para la lógica digital}
 
 Un caso de especial relevancia para la enseñanza de fundamentos de informática
 es el uso de \textbf{Minecraft Education} para introducir conceptos de lógica
-digital mediante su sistema de circuitos \textit{redstone}. Lee y Hou (2025)
+digital mediante su sistema de circuitos \textit{redstone}\cite{minecraftLogicGates}. Lee y Hou (2025)
 presentaron en la \textit{Southeast Asian Conference on Education} (SEACE 2025)
 el diseño y la evaluación preliminar de un juego educativo llamado
 \textit{Taken@Campus}, construido sobre Minecraft Education como plataforma
@@ -843,7 +843,7 @@ se ha \textbf{encapsulado su complejidad}: toda la parte difícil —configuraci
 ciclo de vida de los componentes, detección de colisiones, cambio de escenas— ya está construida
 y funciona. El alumno no toca nada de eso. Lo que sí hace es algo más valioso: \textbf{rellenar
 las funciones de lógica} que dan vida al juego. Esas funciones son pequeñas, claras y están
-escritas en C++ básico, el mismo lenguaje que se trabaja en clase.
+escritas en C++ \cite{cpp17online}, el mismo lenguaje que se trabaja en clase.
 
 La analogía es sencilla: imagina que el motor del coche ya está montado y en marcha. Tú decides
 adónde va: a qué velocidad, cuándo frenar, qué ruta tomar. Eso es exactamente lo que hace el
@@ -859,7 +859,7 @@ El proyecto se organiza en tres bloques bien diferenciados dentro de cada ficher
   \item \textbf{Bloque~2 — Ejercicios en estilo C++}: aquí vive el trabajo del alumno. Son
         funciones cortas, con instrucciones paso a paso, que usan solo \texttt{if}/\texttt{else},
         \texttt{switch}, \texttt{for} y \texttt{while}. Nada más.
-  \item \textbf{Bloque~3 — Trabajo sucio de Unity/C\#}: código que el alumno \emph{nunca verá ni
+  \item \textbf{Bloque~3 — Trabajo sucio de Unity/C\#} \cite{csharpUnity} \cite{csharpUnity}: código que el alumno \emph{nunca verá ni
         tocará}. Aquí viven las llamadas al motor, los eventos y las corrutinas.
 \end{enumerate}
 
@@ -1681,11 +1681,11 @@ En otras palabras, se parte de un entorno ya construido para que el esfuerzo cog
 
 Junto al proyecto se incorpora una breve explicación sobre qué es Mixamo y por qué se ha utilizado en este trabajo. No se plantea como un desarrollo técnico en profundidad, sino como una contextualización sencilla que permita entender el origen del personaje y de sus animaciones. De esta manera, el alumnado y el profesorado pueden situar mejor los elementos del proyecto y comprender que algunas partes visuales han sido preparadas previamente para que el trabajo se concentre en la programación de mecánicas.
 
-También se especifica de forma explícita la versión del entorno utilizada en el desarrollo: Unity 6000.4.5f1. Este dato, que podría parecer menor a primera vista, es en realidad fundamental para la reutilización del material. En proyectos de este tipo, una diferencia de versión puede provocar incompatibilidades, cambios de comportamiento e incluso problemas al abrir o ejecutar el proyecto. Por ello, indicar la versión exacta ayuda a preservar la reproducibilidad del recurso y evita pérdidas de tiempo innecesarias en futuras adaptaciones.
+También se especifica de forma explícita la versión del entorno utilizada en el desarrollo: Unity 6000.4.5f1 \cite{unityDocs}. Este dato, que podría parecer menor a primera vista, es en realidad fundamental para la reutilización del material. En proyectos de este tipo, una diferencia de versión puede provocar incompatibilidades, cambios de comportamiento e incluso problemas al abrir o ejecutar el proyecto. Por ello, indicar la versión exacta ayuda a preservar la reproducibilidad del recurso y evita pérdidas de tiempo innecesarias en futuras adaptaciones.
 
 \subsubsection{Inspiración y referencia del proyecto}
 
-Dentro de la documentación se incluye igualmente una referencia clara a una de las principales inspiraciones del sistema de combate: \textit{Mix and Jam, Batman-Arkham-Combat: Recreating the Combat System from the Batman Arkham Series}. La mención se realiza de forma expresa porque resulta importante reconocer la procedencia de ciertas ideas iniciales que ayudaron a orientar el diseño de la propuesta.
+Dentro de la documentación se incluye igualmente una referencia clara a una de las principales inspiraciones del sistema de combate: \textit{Mix and Jam, Batman-Arkham-Combat: Recreating the Combat System from the Batman Arkham Series}\cite{batmanArkhamCombat} \cite{dotween}. La mención se realiza de forma expresa porque resulta importante reconocer la procedencia de ciertas ideas iniciales que ayudaron a orientar el diseño de la propuesta.
 
 Conviene señalar, no obstante, que la relación con ese trabajo es de inspiración y no de reproducción. Algunos elementos de partida, como la idea del contraataque, el fijado de objetivos o una cierta lógica de coordinación entre enemigos, sirvieron como punto de apoyo en la fase inicial de conceptualización. Sin embargo, a partir de esa base, el proyecto desarrollado sigue una dirección propia y claramente diferenciada, tanto por su finalidad educativa como por su estructura, su progresión por escenas y el tipo de ejercicios que plantea al alumnado.
 
@@ -1760,7 +1760,7 @@ Junto a ello, el manual de ejercicios actúa como documento vertebrador del trab
 
 \subsubsection{Entorno de trabajo y accesibilidad}
 
-Como entorno de desarrollo principal se propone Visual Studio Code. La elección responde a su equilibrio entre potencia, claridad y facilidad de uso. Es una herramienta lo bastante completa como para acompañar el crecimiento del alumnado, pero también suficientemente accesible para no convertirse en un obstáculo añadido al aprendizaje.
+Como entorno de desarrollo principal se propone Visual Studio Code\cite{vscodeDocs}. La elección responde a su equilibrio entre potencia, claridad y facilidad de uso. Es una herramienta lo bastante completa como para acompañar el crecimiento del alumnado, pero también suficientemente accesible para no convertirse en un obstáculo añadido al aprendizaje.
 
 Uno de sus puntos fuertes, dentro de este proyecto, es la ayuda contextual que ofrece al escribir código. Cuando el alumnado no recuerda qué hace una función encapsulada o qué devuelve, puede consultar esa información de forma rápida sin abandonar el entorno de trabajo. Ese pequeño apoyo, aparentemente simple, mejora la autonomía y reduce la necesidad de interrumpir constantemente la tarea para preguntar detalles menores.
 
@@ -3035,7 +3035,7 @@ Barreras para el alumnado diverso & Ritmo único, adaptaciones visibles, depende
 
 El recorrido abierto por esta propuesta apunta en varias direcciones que merecen desarrollo posterior.
 
-La primera, dentro del propio currículo de TIC~I, es la \textbf{gamificación de la Unidad Didáctica 3 sobre arquitectura de ordenadores}, que se imparte a principio de curso —un momento estratégicamente ideal para establecer un clima motivador desde el inicio. Aunque ya se utiliza PCPartPicker como referencia visual, la incorporación de \textit{PC Building Simulator} (versión 1 o 2) permitiría que el alumnado montase virtualmente un ordenador de forma interactiva, conectando los contenidos de hardware con una experiencia simulada y significativa antes de abordar el software.
+La primera, dentro del propio currículo de TIC~I, es la \textbf{gamificación de la Unidad Didáctica 3 sobre arquitectura de ordenadores}, que se imparte a principio de curso —un momento estratégicamente ideal para establecer un clima motivador desde el inicio. Aunque ya se utiliza PCPartPicker\cite{pcpartpicker} como referencia visual, la incorporación de \textit{PC Building Simulator} (versión 1\cite{pcbs1}  o 2\cite{pcbs2}) permitiría que el alumnado montase virtualmente un ordenador de forma interactiva, conectando los contenidos de hardware con una experiencia simulada y significativa antes de abordar el software.
 
 La segunda y más ambiciosa es el \textbf{desarrollo de una segunda parte del videojuego} en el marco de TIC~II. La historia de \textit{Ninja: Crónicas de lo Inerte} deja deliberadamente un final abierto que invita a la continuación. TIC~II cuenta con un bloque de programación más extenso y exclusivo que el de TIC~I —en TIC~I hay cinco bloques y solo uno de programación; en TIC~II hay tres bloques y el de programación es el más amplio—, lo que ofrece más tiempo y más profundidad para un proyecto de mayor envergadura. El alumnado que haya cursado TIC~I ya estará familiarizado con el entorno, reduciendo la barrera de entrada. En esta segunda entrega se podrían implementar mecánicas de mayor complejidad algorítmica:
 
@@ -3166,6 +3166,52 @@ Wouters, P., van Nimwegen, C., van Oostendorp, H., \& van der Spek, E.~D.
 (2013). A meta-analysis of the cognitive and motivational effects of serious
 games. \textit{Journal of Educational Psychology}, \textit{105}(2), 249--265.
 \url{https://doi.org/10.1037/a0031311}
+
+\bibitem{unity6000}
+Unity Technologies. (2026). \textit{Unity 6.4 (6000.4) User Manual}. Recuperado el 11 de junio de 2026, de \url{https://docs.unity3d.com/6000.4/Documentation/Manual/UnityManual.html}
+
+\bibitem{mixamoDocs}
+Adobe Inc. (2021). \textit{Upload and rig 3D characters with Mixamo}. Adobe Help Center. Recuperado el 11 de junio de 2026, de \url{https://helpx.adobe.com/creative-cloud/help/mixamo-rigging-animation.html}
+
+\bibitem{vscode}
+Microsoft. (2015). \textit{Visual Studio Code documentation}. Recuperado el 11 de junio de 2026, de \url{https://code.visualstudio.com/docs}
+
+\bibitem{cpp17online}
+cppreference.com. (s.\,f.). \textit{C++17}. Recuperado el 11 de junio de 2026, de \url{https://en.cppreference.com/w/cpp/17}
+
+\bibitem{csharpUnity}
+Unity Technologies. (2026). \textit{Unity 6.4 Scripting API}. Recuperado el 11 de junio de 2026, de \url{https://docs.unity3d.com/6000.4/Documentation/ScriptReference/index.html}
+
+\bibitem{microsoftCsharp}
+Microsoft. (s.\,f.). \textit{C\# documentation}. Recuperado el 11 de junio de 2026, de \url{https://learn.microsoft.com/dotnet/csharp}
+
+\bibitem{dotween}
+Demigiant. (s.\,f.). \textit{DOTween (HOTween v2) documentation}. Recuperado el 11 de junio de 2026, de \url{https://dotween.demigiant.com/documentation.php}
+
+\bibitem{pcpartpicker}
+PCPartPicker. (s.\,f.). \textit{PCPartPicker}. Recuperado el 11 de junio de 2026, de \url{https://es.pcpartpicker.com}
+
+\bibitem{minecraftLogicGates}
+Minecraft Wiki. (s.\,f.). \textit{Tutorials/Logic gates}. Recuperado el 11 de junio de 2026, de \url{https://minecraft.wiki/wiki/Tutorials/Logic_gates}
+
+\bibitem{batmanArkhamCombat}
+Mix and Jam. (2021). \textit{Batman Arkham's Freeflow Combat} [Repositorio GitHub]. Recuperado el 11 de junio de 2026, de \url{https://github.com/mixandjam/Batman-Arkham-Combat}
+
+\bibitem{pcbs1}
+The Irregular Corporation. (2019). \textit{PC Building Simulator} [Videojuego]. The Irregular Corporation. Información general recuperada de \url{https://store.steampowered.com/app/621060/PC_Building_Simulator/}
+
+\bibitem{pcbs2}
+Spiral House. (2022). \textit{PC Building Simulator 2} [Videojuego]. Epic Games Publishing. Información general recuperada de \url{https://store.epicgames.com/p/pc-building-simulator-2}
+
+\bibitem{factorio}
+Wube Software. (2020). \textit{Factorio} [Videojuego]. Wube Software LTD. Información general recuperada de \url{https://store.steampowered.com/app/427520/Factorio/}
+
+\bibitem{portal2}
+Valve. (2011). \textit{Portal 2} [Videojuego]. Valve. Información general recuperada de \url{https://store.steampowered.com/app/620/Portal_2/}
+
+\bibitem{ksp}
+Squad. (2016). \textit{Kerbal Space Program} [Videojuego]. Squad. Información general recuperada de \url{https://store.steampowered.com/app/220200/Kerbal_Space_Program/}
+
 
 \end{thebibliography}
 
