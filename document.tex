@@ -2296,8 +2296,8 @@ Al superar esta escena el alumno desbloquea narrativamente la habilidad de
 \noindent
 \begin{tblr}{
   width = \textwidth,
-  colspec = {X[2.2,l,m] X[3.5,l,m] X[0.8,c,m] X[1.5,l,m] X[1.1,c,m]},
-  rowsep = 4pt, colsep = 5pt,
+  colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
+  rowsep = 3pt, colsep = 2pt,
   hlines = {1pt, white}, vlines = {1pt, white},
   cell{1}{1} = {c=5}{bg=headerblue, fg=white, font=\large\bfseries, halign=c},
   cell{2}{1} = {bg=headerblue,fg=white,font=\bfseries},
@@ -2343,7 +2343,8 @@ Escena 2 — Funciones a implementar \\
   Comprueba si el golpe es válido: no es autogolpe, el enemigo tiene
   Damageable, no fue golpeado ya en este swing y acepta el tipo de daño. &
   15--20 min & \texttt{if}, operadores lógicos & Fácil \\
-\texttt{BossHitboxColor} &
+\texttt{BossHitbox
+\newline Color} &
   Detecta si el color del arma coincide con el del enemigo para aplicar
   o ignorar el daño. &
   20--30 min & \texttt{if}/\texttt{else}, \texttt{bool} & Fácil \\
@@ -2386,8 +2387,8 @@ porque sin ellos no puede derrotar a los ratones.
 \noindent
 \begin{tblr}{
   width = \textwidth,
-  colspec = {X[2.2,l,m] X[3.5,l,m] X[1.2,c,m] X[2,l,m] X[1.1,c,m]},
-  rowsep = 4pt, colsep = 5pt,
+  colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
+  rowsep = 3pt, colsep = 2pt,
   hlines = {1pt, white}, vlines = {1pt, white},
   cell{1}{1} = {c=5}{bg=headerblue,fg=white,font=\large\bfseries,halign=c},
   cell{2}{1}={bg=headerblue,fg=white,font=\bfseries},
@@ -2414,15 +2415,18 @@ porque sin ellos no puede derrotar a los ratones.
 Escena 3 — Funciones a implementar \\
 \textbf{Función} & \textbf{Descripción} & \textbf{Tiempo} &
   \textbf{Herramientas} & \textbf{Dificultad} \\
-\texttt{BossHitboxColor} (Lightsaber) &
+\texttt{BossHitbox
+\newline Color} (Lightsaber) &
   \texttt{ColorSegunTecla} detecta qué color elegir al pulsar 1/2/3;
   \texttt{ApplyCurrentColor} devuelve el RGB correspondiente. &
   35--50 min & \texttt{if}/\texttt{else}, \texttt{switch} & Fácil \\
-\texttt{Damageable 1} — \texttt{EsEtiquetaPermitida} &
+\texttt{Damageable 1} \texttt{EsEtiqueta
+\newline Permitida} &
   Recorre la lista de armas permitidas del enemigo con un bucle y
   comprueba si el arma que golpea está en ella. Lista vacía = todo vale. &
   25--35 min & \texttt{while}/\texttt{for}, búsqueda lineal & Medio \\
-\texttt{Damageable 2} — \texttt{EsColorVulnerable} &
+\texttt{Damageable 2} \texttt{EsColor
+\newline Vulnerable} &
   Recorre los tipos de daño vulnerables del enemigo y comprueba si el
   color del sable está entre ellos. Sin esta función el ratón es invencible. &
   25--35 min & \texttt{for}, \texttt{enum}$\to$\texttt{int} & Medio \\
@@ -2461,8 +2465,8 @@ aprendido en la escena~3 con los nuevos efectos, reforzando la transferencia.
 \noindent
 \begin{tblr}{
   width = \textwidth,
-  colspec = {X[2.2,l,m] X[3.5,l,m] X[1.2,c,m] X[2,l,m] X[1.1,c,m]},
-  rowsep = 4pt, colsep = 5pt,
+  colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
+  rowsep = 3pt, colsep = 2pt,
   hlines = {1pt, white}, vlines = {1pt, white},
   cell{1}{1}={c=5}{bg=headerblue,fg=white,font=\large\bfseries,halign=c},
   cell{2}{1}={bg=headerblue,fg=white,font=\bfseries},
@@ -2504,26 +2508,33 @@ aprendido en la escena~3 con los nuevos efectos, reforzando la transferencia.
 Escena 4 — Funciones a implementar \\
 \textbf{Función} & \textbf{Descripción} & \textbf{Tiempo} &
   \textbf{Herramientas} & \textbf{Dificultad} \\
-\texttt{BossHitboxColor} (Rapier 1--2) &
+\texttt{BossHitbox
+\newline Color} (Rapier 1--2) &
   \texttt{DetectarCambioDeModo} detecta la tecla pulsada (4/5/6);
   \texttt{ColorSegunModo} asigna el color visual correspondiente. &
   25--35 min & \texttt{if}/\texttt{else}, \texttt{switch} & Fácil \\
-\texttt{Damageable 3} — \texttt{ProcesarEfectoDeEstado} &
+\texttt{Damageable 3} \texttt{ProcesarEfecto
+\newline DeEstado} &
   Recibe el tipo de daño y devuelve un código de efecto: 0 Normal,
   1 Veneno, 2 Sangrado, 3 Color. &
   30--40 min & \texttt{switch}/\texttt{case} & Medio \\
-\texttt{Damageable 4} — \texttt{ProcesarVenenoPorTiempo} &
+\texttt{Damageable 4}  \texttt{ProcesarVeneno
+\newline PorTiempo} &
   Acumula tiempo de frame y aplica ticks de daño de veneno cada segundo,
   devolviendo el resultado en un \texttt{struct}. &
   35--45 min & \texttt{while}, acumulador, \texttt{struct} & Medio \\
-\texttt{Damageable 5} — \texttt{TurnosVenenoRestantes} &
+\texttt{Damageable 5} \texttt{TurnosVeneno
+\newline Restantes} &
   Calcula cuántos turnos de veneno quedan dado el tiempo activo. &
   15--20 min & \texttt{if}, aritmética & Fácil \\
 \texttt{Damageable 6--7} (Sangrado) &
-  \texttt{GolpesFaltantesParaSangrado} y \texttt{ComprobarExplosionSangrado}:
+  \texttt{GolpesFaltantes
+  \newline ParaSangrado} y \texttt{ComprobarExplosion
+  \newline Sangrado}:
   comprueban el umbral de 5 golpes y calculan el daño extra al explotar. &
   40--55 min & \texttt{if}/\texttt{else}, \texttt{struct} & Medio \\
-\texttt{Damageable 10} — \texttt{CalcularDanyoSangradoTotal} &
+\texttt{Damageable 10} \texttt{CalcularDanyo
+\newline SangradoTotal} &
   Simula N golpes de sangrado y acumula el daño total de todas las
   explosiones, reiniciando el contador tras cada una. &
   30--40 min & \texttt{for}, acumulador, simulación & Difícil \\
@@ -2548,12 +2559,10 @@ En esta escena también se completan los ejercicios de inventario que quedaron
 pendientes en la escena~2: el sorteo de loot aleatorio al derrotar enemigos y el
 sistema de pesos de probabilidad interpolados según el nivel del jugador.
 
-\vspace{0.5em}
-\noindent
 \begin{tblr}{
   width = \textwidth,
-  colspec = {X[2.2,l,m] X[3.5,l,m] X[1.2,c,m] X[2,l,m] X[1.1,c,m]},
-  rowsep = 4pt, colsep = 5pt,
+  colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
+  rowsep = 3pt, colsep = 2pt,
   hlines = {1pt, white}, vlines = {1pt, white},
   cell{1}{1}={c=5}{bg=headerblue,fg=white,font=\large\bfseries,halign=c},
   cell{2}{1}={bg=headerblue,fg=white,font=\bfseries},
@@ -2590,19 +2599,25 @@ sistema de pesos de probabilidad interpolados según el nivel del jugador.
 Escena 5 — Funciones a implementar \\
 \textbf{Función} & \textbf{Descripción} & \textbf{Tiempo} &
   \textbf{Herramientas} & \textbf{Dificultad} \\
-\texttt{PlayerUI 11} — \texttt{RollLoot} &
+\texttt{PlayerUI 11
+\newline RollLoot} &
   Decide qué ítem suelta el enemigo usando pesos de probabilidad
   interpolados entre nivel~1 y nivel~5 del jugador. &
   35--45 min & \texttt{for}, interpolación, acumulador & Difícil \\
-\texttt{PlayerUI 12} — \texttt{ContarEnemigosConUnHP} &
+\texttt{PlayerUI 12 
+\newline ContarEnemi
+\newline gosConUnHP} &
   Cuenta cuántos enemigos quedarían con exactamente 1~HP tras el efecto Chaos. &
   20--30 min & \texttt{for}, \texttt{if}, reutilización & Medio \\
-\texttt{PlayerUI 14} — \texttt{TotalItemsEnInventario} &
+\texttt{PlayerUI 14
+\newline TotalItems
+\newline EnInventario} &
   Suma la cantidad de todos los ítems del inventario recorriendo los 4 slots. &
   15--20 min & \texttt{for}, acumulador & Fácil \\
 \texttt{PlayerHealth 1--3} (Primos y XP) &
   \texttt{EsPrimo}, \texttt{SiguientePrimo} y
-  \texttt{CalcularXPNecesariaParaNivel}: la cadena matemática que sustenta
+  \texttt{CalcularXPNecesaria
+  \newline ParaNivel}: la cadena matemática que sustenta
   el sistema de progresión. &
   65--90 min & \texttt{if}, \texttt{for}, \texttt{while}, módulo &
   Medio--Difícil \\
@@ -2637,8 +2652,8 @@ implementado con éxito todo el flujo de programación del proyecto.
 \noindent
 \begin{tblr}{
   width = \textwidth,
-  colspec = {X[2.2,l,m] X[3.5,l,m] X[1.2,c,m] X[2,l,m] X[1.1,c,m]},
-  rowsep = 4pt, colsep = 5pt,
+  colspec = {X[1.85,l,m] X[3.3,l,m] X[1.2,c,m] X[2.15,l,m] X[1.6,c,m]},
+  rowsep = 3pt, colsep = 2pt,
   hlines = {1pt, white}, vlines = {1pt, white},
   cell{1}{1}={c=5}{bg=headerblue,fg=white,font=\large\bfseries,halign=c},
   cell{2}{1}={bg=headerblue,fg=white,font=\bfseries},
@@ -2679,15 +2694,18 @@ Escena 6 — Funciones a implementar \\
   Decide si el golpe se ignora, despierta al boss, lo desconfunde, lo
   bloquea o lo mata, según en qué fase se encuentre. &
   25--35 min & \texttt{if} encadenados, funciones auxiliares & Medio \\
-\texttt{ComprobarVulnerabilidadEJ} &
+\texttt{Comprobar
+\newline VulnerabilidadEJ} &
   Devuelve \texttt{true} solo si el boss ya completó tanto Sleep como
   Confused. Usa el operador lógico \texttt{\&\&}. &
   10--15 min & \texttt{if}, operador \texttt{\&\&} & Fácil \\
-\texttt{GolpesFaltantesSleep} &
+\texttt{GolpesFaltantes
+\newline Sleep} &
   Calcula cuántos golpes faltan para llegar al umbral de~8 y aplicar
   Sleep. Si ya se superó, devuelve~0. &
   15--20 min & \texttt{if}, aritmética & Fácil \\
-\texttt{ProcesarEstadoEspecial} (Boss y hitboxes) &
+\texttt{ProcesarEstado
+\newline Especial} (Boss y hitboxes) &
   Acumula un golpe hacia Sleep o Confused. Si se llega al umbral decide
   el estado mediante \texttt{switch}; si no, devuelve el nuevo contador. &
   20--30 min & \texttt{if}/\texttt{else}, \texttt{switch} & Medio \\
