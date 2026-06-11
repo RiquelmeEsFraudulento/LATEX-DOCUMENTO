@@ -251,317 +251,129 @@ Palabras clave: gamificación, Digital Game-Based Learning, Unity, programación
 
 \section{Marco teórico}
 
+
 \subsection{Videojuegos como recurso educativo}
 
-La relación entre videojuegos y educación ha recorrido un camino accidentado.
-Durante décadas predominó en el discurso público ---y en parte también en el
-académico--- una visión esencialmente cautelar: los videojuegos se asociaban a
-la violencia, a la adicción y a la transmisión de estereotipos de género y
-culturales. Estudios tempranos de Anderson y Bushman (2001) situaban el foco en
-los efectos negativos de los juegos de acción sobre la conducta agresiva, y esa
-preocupación permeó durante años las políticas educativas y las actitudes del
-profesorado \cite{anderson2001effects}. Sin embargo, a lo largo de los años
-2000 y, sobre todo, de la década de 2010, la investigación comenzó a matizar
-esa imagen de forma sustancial.
 
-El punto de inflexión más citado en la literatura especializada es el artículo
-de Granic, Lobel y Engels publicado en 2014 en \textit{American Psychologist},
-titulado «The Benefits of Playing Video Games» \cite{granic2014benefits}. Los
-autores realizan una revisión sistemática de la literatura existente y organizan
-los beneficios potenciales de los videojuegos en cuatro grandes dimensiones:
-cognitiva, motivacional, emocional y social. En lo cognitivo, destacan mejoras
-documentadas en la capacidad de atención sostenida, el pensamiento espacial, la
-resolución de problemas y la flexibilidad mental; en lo motivacional, subrayan
-que los juegos crean estados de «flujo» ---concepto acuñado por
-Csikszentmihalyi en 1990--- que raramente se alcanzan en entornos instructivos
-convencionales \cite{csikszentmihalyi1990flow}. Granic et al.\ también señalan
-que los videojuegos son herramientas potencialmente eficaces para construir
-resiliencia ante el fracaso: el ciclo natural de intento-error-reintento que
-define la jugabilidad entrena al alumnado para tolerar la frustración, una
-habilidad transferible directamente al aprendizaje de la programación
-\cite{granic2014benefits}.
+La relación entre videojuegos y educación ha tenido, históricamente, más detractores que defensores. Durante décadas, el discurso público y buena parte del académico partían de una premisa cautelar: los videojuegos eran sinónimo de violencia, de adicción y de estereotipos de género y culturales mal digeridos. Anderson y Bushman (2001) fijaron ese enfoque desde el principio, centrándose en los efectos de los juegos de acción sobre la conducta agresiva, y esa preocupación permeó durante años tanto las políticas educativas como las actitudes del profesorado \cite{anderson2001effects}. Lo que cambió, a lo largo de los años 2000 y con más fuerza en la década de 2010, fue la acumulación de evidencia que no encajaba con ese retrato.
 
-Un referente clave en el nivel que nos ocupa es el estudio cuasiexperimental de
-Papastergiou (2009), desarrollado con alumnado de Bachillerato en Grecia, que
-comparó el rendimiento y la motivación en la asignatura de informática entre un
-grupo que aprendía conceptos de memoria y algoritmos a través de un juego
-educativo diseñado \textit{ad hoc} y otro que recibía instrucción convencional
-\cite{papastergiou2009digital}. Los resultados revelaron que el grupo que
-trabajó con el juego obtuvo puntuaciones significativamente superiores tanto en
-la prueba de conocimiento como en las escalas de motivación intrínseca. Este
-hallazgo tiene especial relevancia para el presente trabajo porque Papastergiou
-trabajó específicamente con Bachillerato e informática, el mismo nivel y área
-que nos ocupa. Más reciente es la revisión de literatura publicada en
-\textit{Frontiers in Education} en 2023, que analiza el uso del DGBL
-(\textit{Digital Game-Based Learning}) en la formación del profesorado y
-concluye que la alfabetización docente en metodologías de juego es una
-condición necesaria para su implementación eficaz en el aula
-\cite{frontiers2023dgbl}.
 
-Complementariamente, el metaanálisis de Wouters, van Nimwegen, van Oostendorp
-y van der Spek (2013), que sintetiza 39 estudios independientes, concluye que
-los juegos educativos digitales producen mayores ganancias de aprendizaje y
-niveles de retención más elevados que la instrucción convencional,
-especialmente cuando van acompañados de práctica reflexiva y \textit{debriefing}
-posterior a la actividad \cite{wouters2013meta}. Esta condición ---la necesidad
-de que el juego esté enmarcado pedagógicamente y no sea simplemente una
-actividad lúdica desconectada--- es precisamente uno de los principios
-organizadores de la propuesta que se desarrolla en este TFM.
+El artículo más citado de ese giro es el de Granic, Lobel y Engels, publicado en 2014 en \textit{American Psychologist} bajo el título «The Benefits of Playing Video Games» \cite{granic2014benefits}. Los autores revisan la literatura existente y agrupan los beneficios documentados en cuatro áreas: cognitiva, motivacional, emocional y social. En lo cognitivo, identifican mejoras en atención sostenida, pensamiento espacial, resolución de problemas y flexibilidad mental. En lo motivacional, señalan que los juegos generan estados de «flujo» (el concepto de Csikszentmihalyi, 1990) con una frecuencia que los entornos instructivos convencionales raramente alcanzan \cite{csikszentmihalyi1990flow}. Granic et al.\ apuntan también que el ciclo de intento-error-reintento, propio de cualquier videojuego, entrena al alumnado para tolerar la frustración: una habilidad que se transfiere con bastante naturalidad al aprendizaje de la programación \cite{granic2014benefits}.
 
-En definitiva, la literatura actual sobre DGBL ofrece una base empírica sólida
-para afirmar que introducir los fundamentos de programación en TIC~I mediante
-la creación guiada de un videojuego no es una decisión caprichosa ni meramente
-motivacional: es una opción alineada con décadas de investigación sobre el
-potencial de los juegos digitales como instrumentos de aprendizaje significativo,
-siempre que se apliquen con rigor curricular y diseño pedagógico deliberado.
+
+Un referente más cercano al nivel que nos ocupa es el estudio cuasiexperimental de Papastergiou (2009), llevado a cabo con alumnado de Bachillerato en Grecia. El diseño comparó el rendimiento y la motivación en informática entre un grupo que aprendía conceptos de memoria y algoritmos a través de un juego educativo diseñado \textit{ad hoc} y otro que recibía instrucción convencional \cite{papastergiou2009digital}. El grupo que trabajó con el juego obtuvo puntuaciones superiores tanto en la prueba de conocimiento como en las escalas de motivación intrínseca, lo que tiene especial peso aquí porque Papastergiou trabajó con el mismo nivel y área. Más reciente es la revisión de \textit{Frontiers in Education} (2023), que analiza el DGBL (\textit{Digital Game-Based Learning}) en la formación del profesorado y concluye que la alfabetización docente en metodologías de juego es una condición necesaria para que la implementación en el aula funcione \cite{frontiers2023dgbl}.
+
+
+El metaanálisis de Wouters, van Nimwegen, van Oostendorp y van der Spek (2013), que sintetiza 39 estudios independientes, llega a una conclusión parecida: los juegos educativos digitales producen mayores ganancias de aprendizaje y mejor retención que la instrucción convencional, pero sobre todo cuando van acompañados de práctica reflexiva y \textit{debriefing} posterior \cite{wouters2013meta}. Esa condición (que el juego esté enmarcado pedagógicamente y no sea simplemente una actividad lúdica suelta) es uno de los principios sobre los que se organiza la propuesta de este TFM.
+
+
+En definitiva, la literatura actual sobre DGBL ofrece razones suficientes para afirmar que introducir los fundamentos de programación en TIC~I mediante la creación guiada de un videojuego no es una decisión caprichosa: es una opción respaldada por décadas de investigación sobre el potencial de los juegos digitales como instrumentos de aprendizaje significativo, a condición de aplicarlos con rigor curricular y diseño pedagógico deliberado.
 
 
 \subsection{Pros y contras del uso de videojuegos como recurso docente}
 
-Toda herramienta pedagógica presenta un balance de beneficios y limitaciones,
-y los videojuegos no son una excepción. Reconocer ambas caras con honestidad
-es condición indispensable para hacer un uso profesional y responsable de estos
-recursos en el aula.
 
-\textbf{Beneficios documentados:}
+Toda herramienta pedagógica tiene un balance de beneficios y limitaciones, y los videojuegos no son excepción. Reconocer ambas caras con honestidad es condición para hacer un uso profesional y responsable de estos recursos en el aula.
 
-\begin{itemize}
-  \item \textbf{Motivación intrínseca y \textit{engagement}:} Los videojuegos
-  activan sistemas de recompensa que generan implicación sostenida en la tarea.
-  El \textit{feedback} inmediato ---ver que el personaje ejecuta exactamente la
-  acción que el alumno ha programado--- produce una satisfacción que la
-  corrección de ejercicios en papel difícilmente alcanza
-  \cite{granic2014benefits}.
 
-  \item \textbf{Visualización de conceptos abstractos:} Estructuras de control
-  como los bucles o las funciones son notoriamente difíciles de conceptualizar
-  cuando se presentan en forma de pseudocódigo estático. Un personaje que gira
-  360° en pasos discretos porque así lo indica un bucle \texttt{for} convierte
-  lo abstracto en observable \cite{papastergiou2009digital}.
-
-  \item \textbf{Clima emocional positivo:} La investigación de Granic et
-  al.\ (2014) pone el acento en que incluso los juegos sencillos mejoran el
-  estado de ánimo y reducen la ansiedad. En asignaturas técnicas donde la
-  frustración ante el error es habitual, este efecto no es menor
-  \cite{granic2014benefits}.
-
-  \item \textbf{Aprendizaje basado en proyectos:} La creación de un videojuego,
-  aunque sea sencillo, constituye un proyecto con coherencia interna, metas
-  parciales y un producto final. Este formato desarrolla la planificación,
-  la organización del trabajo y la autonomía \cite{wouters2013meta}.
-
-  \item \textbf{Trabajo cooperativo:} Las dinámicas de juego facilitan la
-  colaboración, el diálogo sobre estrategias y la resolución conjunta de
-  problemas \cite{granic2014benefits}.
-\end{itemize}
-
-\textbf{Riesgos y limitaciones:}
+Beneficios documentados:
 
 \begin{itemize}
-  \item \textbf{Distracción y desvío del objetivo curricular:} El entorno
-  gráfico de Unity puede atraer la atención del alumnado hacia aspectos
-  estéticos o lúdicos ajenos al objetivo de la sesión, dificultando el cierre
-  de las tareas propuestas.
+  \item Motivación intrínseca y \textit{engagement}: los videojuegos activan sistemas de recompensa que generan implicación sostenida en la tarea. Ver que el personaje ejecuta exactamente la acción que el alumno ha programado produce una satisfacción que la corrección de ejercicios en papel difícilmente alcanza \cite{granic2014benefits}.
 
-  \item \textbf{Gamificación superficial:} Añadir elementos de juego (puntos,
-  insignias, personajes) sin cohesión pedagógica puede producir una motivación
-  extrínseca efímera que se desvanece sin haber generado aprendizaje real. Wouters
-  et al.\ (2013) subrayan que la diferencia entre gamificación significativa y
-  gamificación cosmética es fundamental \cite{wouters2013meta}.
+  \item Visualización de conceptos abstractos: estructuras de control como los bucles o las funciones son notoriamente difíciles de conceptualizar cuando se presentan como pseudocódigo estático. Un personaje que gira 360° en pasos discretos porque así lo indica un bucle \texttt{for} convierte lo abstracto en algo observable \cite{papastergiou2009digital}.
 
-  \item \textbf{Desigualdades de partida:} El alumnado no llega con el mismo
-  nivel de experiencia en videojuegos ni con las mismas habilidades espaciales
-  y técnicas. Quienes han jugado en entornos 3D comprenden intuitivamente la
-  lógica de movimiento; quienes no, pueden sentirse en desventaja desde el
-  primer momento \cite{granic2014benefits}.
+  \item Clima emocional positivo: la investigación de Granic et al.\ (2014) muestra que incluso los juegos sencillos mejoran el estado de ánimo y reducen la ansiedad. En asignaturas técnicas donde la frustración ante el error es habitual, ese efecto no es menor \cite{granic2014benefits}.
 
-  \item \textbf{Dependencia de infraestructura:} Unity requiere equipos con
-  cierta capacidad gráfica. Si el aula de ordenadores no está bien mantenida o
-  la conexión es inestable, la actividad puede desmoronarse técnicamente.
+  \item Aprendizaje basado en proyectos: crear un videojuego, aunque sea sencillo, constituye un proyecto con coherencia interna, metas parciales y un producto final. Ese formato trabaja la planificación, la organización del trabajo y la autonomía \cite{wouters2013meta}.
+
+  \item Trabajo cooperativo: las dinámicas de juego facilitan la colaboración, el diálogo sobre estrategias y la resolución conjunta de problemas \cite{granic2014benefits}.
 \end{itemize}
 
-La propuesta que articula este TFM adopta un enfoque deliberadamente controlado
-frente a estos riesgos: los ejercicios son de complejidad progresiva y acotada,
-sin violencia, plenamente alineados con los criterios de evaluación de TIC~I,
-y el código ya funcional del esqueleto reduce la carga técnica que puede generar
-frustración. Además, todos los materiales son accesibles antes, durante y después
-de la sesión presencial, lo que mitiga la dependencia exclusiva del tiempo de
-aula.
+
+Riesgos y limitaciones:
+
+\begin{itemize}
+  \item Distracción y desvío del objetivo curricular: el entorno gráfico de Unity puede atraer la atención del alumnado hacia aspectos estéticos o lúdicos ajenos al objetivo de la sesión, dificultando el cierre de las tareas propuestas.
+
+  \item Gamificación superficial: añadir elementos de juego (puntos, insignias, personajes) sin cohesión pedagógica puede producir una motivación extrínseca que se desvanece sin haber generado aprendizaje real. Wouters et al.\ (2013) subrayan que la diferencia entre gamificación significativa y gamificación cosmética importa \cite{wouters2013meta}.
+
+  \item Desigualdades de partida: el alumnado no llega con el mismo nivel de experiencia en videojuegos ni con las mismas habilidades espaciales y técnicas. Quienes han jugado en entornos 3D comprenden intuitivamente la lógica de movimiento; quienes no, pueden sentirse en desventaja desde el primer momento \cite{granic2014benefits}.
+
+  \item Dependencia de infraestructura: Unity requiere equipos con cierta capacidad gráfica. Si el aula de ordenadores no está bien mantenida o la conexión es inestable, la actividad puede desmoronarse técnicamente.
+\end{itemize}
+
+
+La propuesta de este TFM adopta un enfoque deliberadamente controlado frente a estos riesgos: los ejercicios son de complejidad progresiva y acotada, sin violencia, alineados con los criterios de evaluación de TIC~I, y el esqueleto de código ya funcional reduce la carga técnica que puede generar frustración. Además, todos los materiales están disponibles antes, durante y después de la sesión presencial, lo que reduce la dependencia exclusiva del tiempo de aula.
 
 
 \subsection{Experiencias previas del uso de videojuegos como recurso docente}
 
-La investigación sobre DGBL no se limita al aula generalista: una corriente
-creciente documenta su aplicación en disciplinas técnicas y científicas concretas,
-donde la naturaleza simulada del juego permite recrear fenómenos difícilmente
-reproducibles en el aula convencional.
+
+La investigación sobre DGBL no se limita al aula generalista. Una corriente creciente documenta su aplicación en disciplinas técnicas y científicas concretas, donde la naturaleza simulada del juego permite recrear fenómenos que no tienen fácil equivalente en el aula convencional.
+
 
 \subsubsection{Juegos comerciales con aplicación educativa documentada}
 
-Varios videojuegos comerciales han sido objeto de investigación rigurosa por su
-potencial para desarrollar competencias técnicas y científicas de alto nivel.
 
-\textbf{Kerbal Space Program (KSP)} \cite{ksp} ha sido empleado en la enseñanza de física
-e ingeniería aeroespacial. Un estudio presentado en el \textit{Australian
-International Aerospace Congress} de 2023 demuestra que KSP promueve la
-comprensión de conceptos de mecánica orbital, propulsión y dinámica de vuelo
-en estudiantes de ingeniería, generando un aprendizaje situado que ningún libro
-de texto puede replicar con la misma vivencia experimental
-\cite{ksp2023aiac}.
+Varios videojuegos comerciales han sido objeto de investigación por su potencial para desarrollar competencias técnicas y científicas.
 
-\textbf{Factorio} \cite{factorio}, centrado en la automatización industrial y la optimización
-logística, ha encontrado también su hueco académico. Una experiencia de aula
-presentada ante la \textit{American Society for Engineering Education} (ASEE)
-empleó el juego como simulador de sistemas de producción e inventario,
-permitiendo al alumnado verificar empíricamente conceptos propios de la
-ingeniería industrial \cite{factorio2020asee}. Más recientemente, un estudio
-publicado en \textit{IEEE Access} en 2025 evaluó Factorio como \textit{serious
-game} para la educación técnica en ingeniería, concluyendo que su mecánica de
-flujos, cadenas de producción y optimización de recursos constituye un entorno
-de aprendizaje auténtico para competencias de automatización
-\cite{factorio2025ieee}.
 
-\textbf{Portal~2} \cite{portal2} ha sido investigado en profundidad como herramienta para
-evaluar y desarrollar la inteligencia fluida y la resolución de problemas. Shute
-y Wang (2015) analizaron las habilidades de resolución de problemas emergentes
-durante la partida, identificando indicadores medibles embebidos en el propio
-juego \cite{shute2015portal}. Complementariamente, un estudio publicado en la
-revista \textit{Intelligence} (Elsevier, 2016) utilizó el \textit{Puzzle Creator}
-de Portal~2 para medir inteligencia fluida, concluyendo que el entorno de
-resolución de puzles espaciales constituye un instrumento válido de evaluación
-cognitiva \textit{game-based} \cite{portal2intelligence2016}.
+\textbf{Kerbal Space Program (KSP)} \cite{ksp} se ha empleado en la enseñanza de física e ingeniería aeroespacial. Un estudio presentado en el \textit{Australian International Aerospace Congress} de 2023 muestra que KSP favorece la comprensión de mecánica orbital, propulsión y dinámica de vuelo en estudiantes de ingeniería, con un aprendizaje situado que ningún libro de texto replica con la misma vivencia \cite{ksp2023aiac}.
 
-\subsubsection{Puertas lógicas con \textit{Redstone}: Minecraft como entorno
-para la lógica digital}
 
-Un caso de especial relevancia para la enseñanza de fundamentos de informática
-es el uso de \textbf{Minecraft Education} para introducir conceptos de lógica
-digital mediante su sistema de circuitos \textit{redstone}\cite{minecraftLogicGates}. Lee y Hou (2025)
-presentaron en la \textit{Southeast Asian Conference on Education} (SEACE 2025)
-el diseño y la evaluación preliminar de un juego educativo llamado
-\textit{Taken@Campus}, construido sobre Minecraft Education como plataforma
-\cite{lee2025minecraft}.
+\textbf{Factorio} \cite{factorio}, centrado en la automatización industrial y la optimización logística, también ha encontrado su sitio en el ámbito académico. Una experiencia de aula presentada ante la \textit{American Society for Engineering Education} (ASEE) usó el juego como simulador de sistemas de producción e inventario, permitiendo al alumnado verificar empíricamente conceptos de ingeniería industrial \cite{factorio2020asee}. Un estudio posterior, publicado en \textit{IEEE Access} en 2025, evaluó Factorio como \textit{serious game} para la educación técnica en ingeniería y concluyó que su mecánica de flujos, cadenas de producción y optimización de recursos constituye un entorno de aprendizaje auténtico para competencias de automatización \cite{factorio2025ieee}.
 
-En este juego, el escenario es un campus universitario invadido por monstruos.
-Para avanzar de una sala a la siguiente, el alumnado debe analizar circuitos
-\textit{redstone} incompletos ---representaciones visuales e interactivas de
-puertas lógicas AND, OR y NOT--- e identificar qué componentes faltan para que
-funcionen correctamente \cite{lee2025minecraft}. Cuando el circuito opera bien,
-el juego entrega una llave de acceso al siguiente nivel. El diseño incorpora
-retroalimentación inmediata mediante bloques de comando y guía narrativa
-mediante personajes NPC, lo que mantiene la carga cognitiva bajo control sin
-reducir el desafío intelectual.
 
-Los resultados con 20 alumnos de Primaria en Taiwán mostraron mejoras
-estadísticamente significativas en rendimiento de aprendizaje, con una media
-en pretest de 42{,}15 frente a 64{,}90 en el postest ($p < 0{,}001$). Además
-se observaron altos niveles de flujo medidos con la escala de Kiili (2006), alta
-motivación según el modelo ARCS de Keller (1987) y carga cognitiva extrínseca
-no elevada \cite{lee2025minecraft, kiili2006flow, keller1987arcs}. Como señalan
-los propios autores, la interactividad y el \textit{feedback} en tiempo real del
-sistema \textit{redstone} son los factores clave que permiten a los estudiantes
-superar la abstracción propia de la lógica digital.
+\textbf{Portal~2} \cite{portal2} ha sido investigado como herramienta para evaluar y desarrollar la inteligencia fluida y la resolución de problemas. Shute y Wang (2015) analizaron las habilidades de resolución de problemas que emergen durante la partida e identificaron indicadores medibles embebidos en el propio juego \cite{shute2015portal}. Un estudio publicado en \textit{Intelligence} (Elsevier, 2016) utilizó el \textit{Puzzle Creator} de Portal~2 para medir inteligencia fluida, concluyendo que el entorno de puzles espaciales funciona como instrumento válido de evaluación cognitiva \textit{game-based} \cite{portal2intelligence2016}.
 
-Este trabajo conecta directamente con la filosofía del presente TFM: al igual
-que \textit{Taken@Campus} utiliza los circuitos \textit{redstone} de Minecraft
-como abstracción visual de las puertas lógicas, la propuesta que aquí se
-desarrolla usa Unity como abstracción ejecutable de las estructuras de control
-de programación. En ambos casos, el motor del juego ya está construido y lo que
-el alumno manipula es la lógica que da vida al sistema. La diferencia de nivel
----Primaria en el caso de Lee y Hou frente a 1.º de Bachillerato en el nuestro---
-refuerza la escalabilidad de este enfoque pedagógico a lo largo de toda la
-trayectoria educativa.
 
-\subsection{Experiencias previas del uso de videojuegos en docencia en
-Bachillerato}
+\subsubsection{Puertas lógicas con \textit{Redstone}: Minecraft como entorno para la lógica digital}
 
-La aplicación de videojuegos y entornos de desarrollo en contextos de Bachillerato
-y educación secundaria superior cuenta ya con un número creciente de experiencias
-documentadas, aunque la producción científica en este nivel sigue siendo inferior
-a la disponible para etapas universitarias o de Formación Profesional.
 
-El referente más directo sigue siendo el trabajo de Papastergiou (2009), citado
-en la subsección anterior, que demostró empíricamente la superioridad del enfoque
-gamificado frente a la instrucción convencional en una asignatura de informática
-de Bachillerato \cite{papastergiou2009digital}. También merece mención el
-proyecto Scratch en sus distintas implementaciones escolares: aunque pensado
-originalmente para Educación Primaria y Secundaria Obligatoria, varios estudios
-han extendido su uso a 1.º de Bachillerato para introducir la programación
-orientada a eventos, con resultados positivos en motivación y en comprensión de
-las estructuras de control básicas, tal y como documentan Maloney, Resnick, Rusk,
-Silverman y Eastmond (2010) \cite{maloney2010scratch}.
+Un caso especialmente relevante para la enseñanza de fundamentos de informática es el uso de \textbf{Minecraft Education} para introducir lógica digital mediante los circuitos \textit{redstone} \cite{minecraftLogicGates}. Lee y Hou (2025) presentaron en la \textit{Southeast Asian Conference on Education} (SEACE 2025) el diseño y la evaluación preliminar de un juego educativo llamado \textit{Taken@Campus}, construido sobre Minecraft Education como plataforma \cite{lee2025minecraft}.
 
-En el contexto español, la revisión sobre gamificación digital en Educación
-Secundaria publicada en \textit{Revista Latina de Comunicación Social} en 2022
-detecta un patrón claro: la mayoría de las experiencias documentadas se centran
-en matemáticas, lengua e idiomas, y son mucho menos frecuentes en asignaturas
-tecnológicas o de programación \cite{revistacomunicacion2022}. Esta ausencia
-relativa refuerza la pertinencia del presente trabajo: existe un nicho pedagógico
-escasamente cubierto en la literatura española. Por otro lado, trabajos como el
-de Padrón, Ortega y García (2022) en el área universitaria de programación
-muestran que la gamificación de ejercicios de código ---con retroalimentación
-inmediata, misiones y progresión--- incrementa significativamente la motivación y
-el rendimiento académico, lo que permite extrapolar con cautela conclusiones al
-nivel de Bachillerato \cite{padron2022gamificacion}.
 
-A nivel internacional, la investigación de la Universidad de Ámsterdam (2017)
-sobre DGBL en educación secundaria es uno de los trabajos más rigurosos
-disponibles. Su estudio de campo en centros holandeses de secundaria superior
-concluye que el impacto de los juegos educativos es mayor cuando el docente
-tiene formación específica en su uso y cuando los juegos se integran en la
-secuencia didáctica habitual en lugar de presentarse como actividades
-extracurriculares puntuales \cite{amsterdam2017dgbl}. Este hallazgo conecta
-directamente con la filosofía de diseño de la presente propuesta: no se trata
-de «jugar un día con Unity», sino de articular toda una unidad didáctica de
-programación alrededor de un proyecto coherente de creación de videojuego.
+En este juego, el escenario es un campus universitario invadido por monstruos. Para pasar de una sala a la siguiente, el alumnado debe analizar circuitos \textit{redstone} incompletos (representaciones visuales e interactivas de puertas lógicas AND, OR y NOT) e identificar qué componentes faltan para que funcionen. Cuando el circuito opera correctamente, el juego entrega una llave de acceso al siguiente nivel. El diseño incorpora retroalimentación inmediata mediante bloques de comando y guía narrativa mediante personajes NPC, lo que mantiene la carga cognitiva bajo control sin reducir el desafío intelectual \cite{lee2025minecraft}.
+
+
+Los resultados con 20 alumnos de Primaria en Taiwán mostraron mejoras estadísticamente significativas en rendimiento de aprendizaje: la media en pretest fue de 42{,}15 frente a 64{,}90 en el postest ($p < 0{,}001$). También se observaron altos niveles de flujo medidos con la escala de Kiili (2006), alta motivación según el modelo ARCS de Keller (1987) y carga cognitiva extrínseca no elevada \cite{lee2025minecraft, kiili2006flow, keller1987arcs}. Los propios autores señalan que la interactividad y el \textit{feedback} en tiempo real del sistema \textit{redstone} son los factores que permiten a los estudiantes superar la abstracción propia de la lógica digital.
+
+
+Este trabajo conecta directamente con la filosofía del presente TFM: al igual que \textit{Taken@Campus} usa los circuitos \textit{redstone} de Minecraft como abstracción visual de las puertas lógicas, la propuesta que aquí se desarrolla usa Unity como abstracción ejecutable de las estructuras de control de programación. En ambos casos, el motor del juego ya está construido y lo que el alumno manipula es la lógica que da vida al sistema. La diferencia de nivel (Primaria en el caso de Lee y Hou frente a 1.º de Bachillerato en el nuestro) refuerza la escalabilidad de este enfoque a lo largo de toda la trayectoria educativa.
+
+
+\subsection{Experiencias previas del uso de videojuegos en docencia en Bachillerato}
+
+
+La aplicación de videojuegos y entornos de desarrollo en Bachillerato y educación secundaria superior cuenta ya con un número creciente de experiencias documentadas, aunque la producción científica en este nivel sigue siendo inferior a la disponible para etapas universitarias o de Formación Profesional.
+
+
+El referente más directo sigue siendo el trabajo de Papastergiou (2009), que demostró empíricamente que el enfoque gamificado superaba a la instrucción convencional en una asignatura de informática de Bachillerato \cite{papastergiou2009digital}. También merece mención el proyecto Scratch en sus distintas implementaciones escolares: aunque pensado originalmente para Educación Primaria y Secundaria Obligatoria, varios estudios han extendido su uso a 1.º de Bachillerato para introducir la programación orientada a eventos, con resultados positivos en motivación y en comprensión de las estructuras de control básicas, tal y como documentan Maloney, Resnick, Rusk, Silverman y Eastmond (2010) \cite{maloney2010scratch}.
+
+
+En el contexto español, la revisión sobre gamificación digital en Educación Secundaria publicada en \textit{Revista Latina de Comunicación Social} en 2022 detecta un patrón claro: la mayoría de las experiencias documentadas se concentran en matemáticas, lengua e idiomas, y son mucho menos frecuentes en asignaturas tecnológicas o de programación \cite{revistacomunicacion2022}. Esa ausencia relativa justifica la pertinencia de este trabajo: hay un nicho pedagógico escasamente cubierto en la literatura española. Por otro lado, trabajos como el de Padrón, Ortega y García (2022) en el área universitaria de programación muestran que la gamificación de ejercicios de código (con retroalimentación inmediata, misiones y progresión) incrementa la motivación y el rendimiento académico de forma apreciable, lo que permite trasladar con cautela esas conclusiones al nivel de Bachillerato \cite{padron2022gamificacion}.
+
+
+A nivel internacional, la investigación de la Universidad de Ámsterdam (2017) sobre DGBL en educación secundaria es uno de los trabajos más rigurosos disponibles. Su estudio de campo en centros holandeses de secundaria superior concluye que el impacto de los juegos educativos es mayor cuando el docente tiene formación específica en su uso y cuando los juegos se integran en la secuencia didáctica habitual, no como actividades extracurriculares puntuales \cite{amsterdam2017dgbl}. Ese hallazgo conecta directamente con el planteamiento de esta propuesta: no se trata de «jugar un día con Unity», sino de articular toda una unidad didáctica de programación alrededor de un proyecto coherente de creación de videojuego.
 
 
 \subsection{Conclusiones del marco teórico}
 
-La revisión de la literatura presentada en este capítulo permite extraer un
-conjunto de conclusiones que fundamentan y justifican la propuesta didáctica
-desarrollada en este TFM.
 
-En primer lugar, existe una base empírica sólida y consolidada que avala el uso
-de videojuegos y entornos de DGBL como herramientas de aprendizaje significativo.
-Los beneficios documentados por Granic et al.\ (2014) y el metaanálisis de
-Wouters et al.\ (2013) ---motivación intrínseca, visualización de conceptos
-abstractos, clima emocional positivo y desarrollo de la resiliencia ante el
-error--- son especialmente relevantes en asignaturas técnicas como TIC~I, donde
-la frustración programática constituye una de las principales barreras para el
-aprendizaje \cite{granic2014benefits, wouters2013meta, papastergiou2009digital}.
+La revisión presentada en este capítulo permite extraer varias conclusiones que fundamentan la propuesta didáctica de este TFM.
 
-En segundo lugar, la evidencia procedente de contextos técnicos y científicos
-pone de manifiesto que los videojuegos no son únicamente herramientas
-motivacionales: son entornos de aprendizaje auténtico donde la mecánica del
-juego \textit{es} el contenido curricular. Desde la ingeniería aeroespacial con
-KSP \cite{ksp2023aiac} hasta la lógica digital con los circuitos \textit{redstone}
-de Minecraft \cite{lee2025minecraft}, pasando por la automatización industrial
-con Factorio \cite{factorio2020asee, factorio2025ieee} o la resolución de
-problemas cognitivos con Portal~2 \cite{shute2015portal, portal2intelligence2016},
-todos estos casos comparten el mismo principio: programar o manipular la lógica
-del juego \textbf{es} aprender el contenido. Este principio está en el corazón
-de la propuesta que aquí se presenta.
 
-En tercer lugar, las experiencias en Bachillerato ---tanto en el contexto griego
-analizado por Papastergiou (2009) como en el panorama español descrito en la
-revisión de 2022 de \textit{Revista Latina de Comunicación Social}--- revelan un
-nicho pedagógico insuficientemente cubierto: la enseñanza de programación en
-secundaria superior mediante DGBL es escasa, y los pocos estudios disponibles
-confirman que cuando se diseña con rigor curricular y acompañamiento docente sus
-resultados son superiores a la instrucción convencional
-\cite{papastergiou2009digital, revistacomunicacion2022, amsterdam2017dgbl}.
+La primera es que existe una base empírica consolidada que avala el uso de videojuegos y entornos de DGBL como herramientas de aprendizaje significativo. Los beneficios documentados por Granic et al.\ (2014) y el metaanálisis de Wouters et al.\ (2013) (motivación intrínseca, visualización de conceptos abstractos, clima emocional positivo y construcción de resiliencia ante el error) resultan especialmente pertinentes en asignaturas técnicas como TIC~I, donde la frustración programática es una de las principales barreras para el aprendizaje \cite{granic2014benefits, wouters2013meta, papastergiou2009digital}.
 
-Finalmente, la condición más consistentemente señalada por la literatura para
-que el DGBL sea eficaz es que el juego esté integrado en una secuencia didáctica
-coherente ---no como actividad puntual--- y que el docente tenga formación
-específica para guiar su uso. Tanto el informe de la Universidad de Ámsterdam
-(2017) como la revisión de \textit{Frontiers in Education} (2023) coinciden en
-este diagnóstico \cite{amsterdam2017dgbl, frontiers2023dgbl}. Esta propuesta
-cumple ambas condiciones: el videojuego no es un premio al final del tema, sino
-el eje vertebrador de toda la unidad didáctica de programación, y los materiales
-complementarios garantizan que cualquier docente pueda adoptarla sin necesidad
-de dominar Unity.
+
+La segunda es que la evidencia procedente de contextos técnicos y científicos confirma que los videojuegos no son únicamente herramientas motivacionales: son entornos de aprendizaje auténtico donde la mecánica del juego \textbf{es} el contenido curricular. Desde la ingeniería aeroespacial con KSP \cite{ksp2023aiac} hasta la lógica digital con los circuitos \textit{redstone} de Minecraft \cite{lee2025minecraft}, pasando por la automatización industrial con Factorio \cite{factorio2020asee, factorio2025ieee} o la resolución de problemas cognitivos con Portal~2 \cite{shute2015portal, portal2intelligence2016}, todos estos casos comparten el mismo principio: programar o manipular la lógica del juego \textbf{es} aprender el contenido. Ese principio está en el corazón de la propuesta que aquí se presenta.
+
+
+La tercera conclusión es que las experiencias en Bachillerato (tanto el contexto griego analizado por Papastergiou (2009) como el panorama español descrito en la revisión de 2022 de \textit{Revista Latina de Comunicación Social}) revelan un nicho pedagógico insuficientemente cubierto: la enseñanza de programación en secundaria superior mediante DGBL es escasa, y los pocos estudios disponibles confirman que cuando se diseña con rigor curricular y acompañamiento docente sus resultados superan a la instrucción convencional \cite{papastergiou2009digital, revistacomunicacion2022, amsterdam2017dgbl}.
+
+
+La condición que la literatura señala con más consistencia para que el DGBL funcione es que el juego esté integrado en una secuencia didáctica coherente (no como actividad puntual) y que el docente tenga formación específica para guiar su uso. Tanto el informe de la Universidad de Ámsterdam (2017) como la revisión de \textit{Frontiers in Education} (2023) coinciden en este diagnóstico \cite{amsterdam2017dgbl, frontiers2023dgbl}. Esta propuesta cumple ambas condiciones: el videojuego no es un premio al final del tema, sino el eje de toda la unidad didáctica de programación, y los materiales complementarios permiten que cualquier docente pueda adoptarla sin necesidad de dominar Unity.
 
 \section{La propuesta de este trabajo: el uso de videojuegos en TIC I (1º de bachillerato)}
 
