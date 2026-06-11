@@ -3,7 +3,7 @@
 % ─── Codificación e idioma ──────────────────────────────────────────
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[spanish,es-nodecimaldot]{babel}   % es-nodecimaldot replaces \decimalpoint
+\usepackage[spanish,es-nodecimaldot]{babel} % es-nodecimaldot replaces \decimalpoint
 
 % ─── Geometría de página ────────────────────────────────────────────
 \usepackage[a4paper, total={6in, 9in}]{geometry}
@@ -12,8 +12,8 @@
 %\setkeys{ tblr }{ hspan=minimal, vspan=minimal }
 
 %\directlua{
-  %local orig = tex.runlocal
-  %texconfig.max_print_line = 20000
+%local orig = tex.runlocal
+%texconfig.max_print_line = 20000
 %}
 
 % ─── Gráficos y figuras ─────────────────────────────────────────────
@@ -24,7 +24,7 @@
 \usepackage{ragged2e}
 
 % ─── Tablas ─────────────────────────────────────────────────────────
-\usepackage{booktabs}        % for non-tblr tables (toprule/midrule/bottomrule)
+\usepackage{booktabs} % for non-tblr tables (toprule/midrule/bottomrule)
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{tabularray}
@@ -48,19 +48,19 @@
 \definecolor{headerblue}{RGB}{30, 90, 160}
 \definecolor{rowblue}{RGB}{100, 150, 210}
 \definecolor{rowbluelight}{RGB}{210, 228, 248}
-\definecolor{titlegold}    {RGB}{230,  80,   0}
-\definecolor{bloquenight}  {RGB}{  5,  15,  60}
-\definecolor{ceblue}       {RGB}{  0,  60, 200}
-\definecolor{uniteal}      {RGB}{  0, 140, 120}
-\definecolor{criteriopurp} {RGB}{120,   0, 150}
-\definecolor{colheadblue}  {RGB}{ 20,  80, 170}
-\definecolor{sbgreen}      {RGB}{  0, 100,  40}
-\definecolor{sbpurple}     {RGB}{ 80,   0, 130}
-\definecolor{subeven}      {RGB}{220, 235, 255}
-\definecolor{subodd}       {RGB}{244, 244, 244}
-\definecolor{instrugold}   {RGB}{170,  60,   0}
-\definecolor{descriptbg}   {RGB}{180, 210, 245}
-\definecolor{grisclaro}    {RGB}{235,235,238}
+\definecolor{titlegold} {RGB}{230, 80, 0}
+\definecolor{bloquenight} {RGB}{ 5, 15, 60}
+\definecolor{ceblue} {RGB}{ 0, 60, 200}
+\definecolor{uniteal} {RGB}{ 0, 140, 120}
+\definecolor{criteriopurp} {RGB}{120, 0, 150}
+\definecolor{colheadblue} {RGB}{ 20, 80, 170}
+\definecolor{sbgreen} {RGB}{ 0, 100, 40}
+\definecolor{sbpurple} {RGB}{ 80, 0, 130}
+\definecolor{subeven} {RGB}{220, 235, 255}
+\definecolor{subodd} {RGB}{244, 244, 244}
+\definecolor{instrugold} {RGB}{170, 60, 0}
+\definecolor{descriptbg} {RGB}{180, 210, 245}
+\definecolor{grisclaro} {RGB}{235,235,238}
 
 % ─── Tipografía y formato ───────────────────────────────────────────
 \usepackage{xcolor}
@@ -90,57 +90,57 @@
 \usepackage{listingsutf8}
 
 \lstset{
-    frame=Ltb,
-    framerule=0.5pt,
-    aboveskip=0.5cm,
-    framextopmargin=3pt,
-    framexbottommargin=3pt,
-    framexleftmargin=0.1cm,
-    framesep=0pt,
-    rulesep=.4pt,
-    backgroundcolor=\color{gray97},
-    rulesepcolor=\color{black},
-    stringstyle=\ttfamily,
-    showstringspaces=false,
-    basicstyle=\scriptsize\ttfamily,
-    commentstyle=\color{gray45},
-    keywordstyle=\bfseries,
-    numbers=left,
-    numbersep=6pt,
-    numberstyle=\tiny,
-    numberfirstline=false,
-    breaklines=true,
-    literate=
-        {á}{'a}1 {é}{'e}1 {í}{'i}1 {ó}{'o}1 {ú}{'u}1
-        {Á}{'A}1 {É}{'E}1 {Í}{'I}1 {Ó}{'O}1 {Ú}{'U}1
-        {ñ}{~n}1 {Ñ}{~N}1
-        {¿}{{?`}}1,
+frame=Ltb,
+framerule=0.5pt,
+aboveskip=0.5cm,
+framextopmargin=3pt,
+framexbottommargin=3pt,
+framexleftmargin=0.1cm,
+framesep=0pt,
+rulesep=.4pt,
+backgroundcolor=\color{gray97},
+rulesepcolor=\color{black},
+stringstyle=\ttfamily,
+showstringspaces=false,
+basicstyle=\scriptsize\ttfamily,
+commentstyle=\color{gray45},
+keywordstyle=\bfseries,
+numbers=left,
+numbersep=6pt,
+numberstyle=\tiny,
+numberfirstline=false,
+breaklines=true,
+literate=
+{á}{'a}1 {é}{'e}1 {í}{'i}1 {ó}{'o}1 {ú}{'u}1
+{Á}{'A}1 {É}{'E}1 {Í}{'I}1 {Ó}{'O}1 {Ú}{'U}1
+{ñ}{~n}1 {Ñ}{~N}1
+{¿}{{?`}}1,
 }
 
 \lstdefinestyle{CodigoC}{
-    basicstyle=\scriptsize,
-    frame=single,
-    language=C,
-    numbers=left
+basicstyle=\scriptsize,
+frame=single,
+language=C,
+numbers=left
 }
 
 \lstdefinestyle{CodigoCpp}{
-    basicstyle=\small,
-    frame=single,
-    backgroundcolor=\color{gray30},
-    language=C++,
-    numbers=left
+basicstyle=\small,
+frame=single,
+backgroundcolor=\color{gray30},
+language=C++,
+numbers=left
 }
 
 \lstdefinestyle{Consola}{
-    basicstyle=\scriptsize\bf\ttfamily,
-    backgroundcolor=\color{gray30},
-    frame=single,
-    numbers=none
+basicstyle=\scriptsize\bf\ttfamily,
+backgroundcolor=\color{gray30},
+frame=single,
+numbers=none
 }
 
 \lstnewenvironment{listing}[1][]
-    {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+{\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
 
 % ─── Secciones profundas (hasta nivel 5) ────────────────────────────
 \usepackage{titlesec}
@@ -149,14 +149,14 @@
 \newcounter{subsubsubsection}[subsubsection]
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
 \titleformat{\subsubsubsection}
-    {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
 \titlespacing*{\subsubsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \titleclass{\subsubsubsubsection}{straight}[\subsubsubsection]
 \newcounter{subsubsubsubsection}[subsubsubsection]
 \renewcommand\thesubsubsubsubsection{\thesubsubsubsection.\arabic{subsubsubsubsection}}
 \titleformat{\subsubsubsubsection}
-    {\normalfont\small\bfseries}{\thesubsubsubsubsection}{1em}{}
+{\normalfont\small\bfseries}{\thesubsubsubsubsection}{1em}{}
 \titlespacing*{\subsubsubsubsection}{0pt}{2.5ex plus 1ex minus .2ex}{1ex plus .2ex}
 
 \makeatletter
@@ -1697,7 +1697,6 @@ CE1. & & {\footnotesize TICO.1.E.2.6. Depuración.} \\
   
 \end{longtblr}
 
-\end{comment}
 \subsubsection{Programación didáctica de TIC I}
 
 La programación didáctica de TIC I se estructura en torno a 12 unidades didácticas, organizadas en 5 bloques temáticos
